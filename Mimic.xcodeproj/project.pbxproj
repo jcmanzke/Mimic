@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		29B5746E2F377CFC00BBD9B0 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B5746D2F377CFC00BBD9B0 /* DeviceActivity.framework */; };
+		29B574762F377CFD00BBD9B0 /* DeviceActivityMonitorExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 29B5746B2F377CFC00BBD9B0 /* DeviceActivityMonitorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		29B574822F3781E500BBD9B0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B574812F3781E500BBD9B0 /* WidgetKit.framework */; };
+		29B574842F3781E500BBD9B0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B574832F3781E500BBD9B0 /* SwiftUI.framework */; };
+		29B574952F3781E800BBD9B0 /* PetWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 29B574802F3781E500BBD9B0 /* PetWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		29B574D52F378DAE00BBD9B0 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 29B574D42F378DAE00BBD9B0 /* RiveRuntime */; };
+		29B574D72F3790F300BBD9B0 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 29B574D62F3790F300BBD9B0 /* RiveRuntime */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		29B574312F37510B00BBD9B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,17 +31,79 @@
 			remoteGlobalIDString = 29B574222F37510500BBD9B0;
 			remoteInfo = Mimic;
 		};
+		29B574742F377CFD00BBD9B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B5741B2F37510500BBD9B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29B5746A2F377CFC00BBD9B0;
+			remoteInfo = DeviceActivityMonitorExtension;
+		};
+		29B574932F3781E800BBD9B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B5741B2F37510500BBD9B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29B5747F2F3781E500BBD9B0;
+			remoteInfo = PetWidgetExtensionExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		29B5747B2F377CFD00BBD9B0 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				29B574952F3781E800BBD9B0 /* PetWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+				29B574762F377CFD00BBD9B0 /* DeviceActivityMonitorExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		29B574232F37510500BBD9B0 /* Mimic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mimic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B574302F37510B00BBD9B0 /* MimicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MimicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B5743A2F37510B00BBD9B0 /* MimicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MimicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B5746B2F377CFC00BBD9B0 /* DeviceActivityMonitorExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceActivityMonitorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B5746D2F377CFC00BBD9B0 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		29B574802F3781E500BBD9B0 /* PetWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PetWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B574812F3781E500BBD9B0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		29B574832F3781E500BBD9B0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		29B574772F377CFD00BBD9B0 /* Exceptions for "DeviceActivityMonitorExtension" folder in "DeviceActivityMonitorExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 29B5746A2F377CFC00BBD9B0 /* DeviceActivityMonitorExtension */;
+		};
+		29B574CF2F3785B600BBD9B0 /* Exceptions for "Mimic" folder in "PetWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ScreenPet/LiveActivity/PetActivityAttributes.swift,
+			);
+			target = 29B5747F2F3781E500BBD9B0 /* PetWidgetExtensionExtension */;
+		};
+		29B574D22F378AD900BBD9B0 /* Exceptions for "Mimic" folder in "Mimic" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 29B574222F37510500BBD9B0 /* Mimic */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		29B574252F37510500BBD9B0 /* Mimic */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				29B574D22F378AD900BBD9B0 /* Exceptions for "Mimic" folder in "Mimic" target */,
+				29B574CF2F3785B600BBD9B0 /* Exceptions for "Mimic" folder in "PetWidgetExtensionExtension" target */,
+			);
 			path = Mimic;
 			sourceTree = "<group>";
 		};
@@ -45,6 +117,24 @@
 			path = MimicUITests;
 			sourceTree = "<group>";
 		};
+		29B5746F2F377CFD00BBD9B0 /* DeviceActivityMonitorExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				29B574772F377CFD00BBD9B0 /* Exceptions for "DeviceActivityMonitorExtension" folder in "DeviceActivityMonitorExtension" target */,
+			);
+			path = DeviceActivityMonitorExtension;
+			sourceTree = "<group>";
+		};
+		29B574A12F3782E300BBD9B0 /* PetWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PetWidgetExtension;
+			sourceTree = "<group>";
+		};
+		29B574BB2F3784EA00BBD9B0 /* PetWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PetWidgetExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B574D52F378DAE00BBD9B0 /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +160,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29B574682F377CFC00BBD9B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29B5746E2F377CFC00BBD9B0 /* DeviceActivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29B5747D2F3781E500BBD9B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29B574842F3781E500BBD9B0 /* SwiftUI.framework in Frameworks */,
+				29B574822F3781E500BBD9B0 /* WidgetKit.framework in Frameworks */,
+				29B574D72F3790F300BBD9B0 /* RiveRuntime in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +187,10 @@
 				29B574252F37510500BBD9B0 /* Mimic */,
 				29B574332F37510B00BBD9B0 /* MimicTests */,
 				29B5743D2F37510B00BBD9B0 /* MimicUITests */,
+				29B5746F2F377CFD00BBD9B0 /* DeviceActivityMonitorExtension */,
+				29B574A12F3782E300BBD9B0 /* PetWidgetExtension */,
+				29B574BB2F3784EA00BBD9B0 /* PetWidgetExtension */,
+				29B5746C2F377CFC00BBD9B0 /* Frameworks */,
 				29B574242F37510500BBD9B0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +201,20 @@
 				29B574232F37510500BBD9B0 /* Mimic.app */,
 				29B574302F37510B00BBD9B0 /* MimicTests.xctest */,
 				29B5743A2F37510B00BBD9B0 /* MimicUITests.xctest */,
+				29B5746B2F377CFC00BBD9B0 /* DeviceActivityMonitorExtension.appex */,
+				29B574802F3781E500BBD9B0 /* PetWidgetExtensionExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		29B5746C2F377CFC00BBD9B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B5746D2F377CFC00BBD9B0 /* DeviceActivity.framework */,
+				29B574812F3781E500BBD9B0 /* WidgetKit.framework */,
+				29B574832F3781E500BBD9B0 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,16 +227,20 @@
 				29B5741F2F37510500BBD9B0 /* Sources */,
 				29B574202F37510500BBD9B0 /* Frameworks */,
 				29B574212F37510500BBD9B0 /* Resources */,
+				29B5747B2F377CFD00BBD9B0 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				29B574752F377CFD00BBD9B0 /* PBXTargetDependency */,
+				29B574942F3781E800BBD9B0 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				29B574252F37510500BBD9B0 /* Mimic */,
 			);
 			name = Mimic;
 			packageProductDependencies = (
+				29B574D42F378DAE00BBD9B0 /* RiveRuntime */,
 			);
 			productName = Mimic;
 			productReference = 29B574232F37510500BBD9B0 /* Mimic.app */;
@@ -163,6 +292,48 @@
 			productReference = 29B5743A2F37510B00BBD9B0 /* MimicUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		29B5746A2F377CFC00BBD9B0 /* DeviceActivityMonitorExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29B574782F377CFD00BBD9B0 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitorExtension" */;
+			buildPhases = (
+				29B574672F377CFC00BBD9B0 /* Sources */,
+				29B574682F377CFC00BBD9B0 /* Frameworks */,
+				29B574692F377CFC00BBD9B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				29B5746F2F377CFD00BBD9B0 /* DeviceActivityMonitorExtension */,
+			);
+			name = DeviceActivityMonitorExtension;
+			packageProductDependencies = (
+			);
+			productName = DeviceActivityMonitorExtension;
+			productReference = 29B5746B2F377CFC00BBD9B0 /* DeviceActivityMonitorExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		29B5747F2F3781E500BBD9B0 /* PetWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29B574972F3781E800BBD9B0 /* Build configuration list for PBXNativeTarget "PetWidgetExtensionExtension" */;
+			buildPhases = (
+				29B5747C2F3781E500BBD9B0 /* Sources */,
+				29B5747D2F3781E500BBD9B0 /* Frameworks */,
+				29B5747E2F3781E500BBD9B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PetWidgetExtensionExtension;
+			packageProductDependencies = (
+				29B574D62F3790F300BBD9B0 /* RiveRuntime */,
+			);
+			productName = PetWidgetExtensionExtension;
+			productReference = 29B574802F3781E500BBD9B0 /* PetWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +355,12 @@
 						CreatedOnToolsVersion = 26.2;
 						TestTargetID = 29B574222F37510500BBD9B0;
 					};
+					29B5746A2F377CFC00BBD9B0 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					29B5747F2F3781E500BBD9B0 = {
+						CreatedOnToolsVersion = 26.2;
+					};
 				};
 			};
 			buildConfigurationList = 29B5741E2F37510500BBD9B0 /* Build configuration list for PBXProject "Mimic" */;
@@ -195,6 +372,9 @@
 			);
 			mainGroup = 29B5741A2F37510500BBD9B0;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				29B574D32F378DAE00BBD9B0 /* XCRemoteSwiftPackageReference "rive-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 29B574242F37510500BBD9B0 /* Products */;
 			projectDirPath = "";
@@ -203,6 +383,8 @@
 				29B574222F37510500BBD9B0 /* Mimic */,
 				29B5742F2F37510B00BBD9B0 /* MimicTests */,
 				29B574392F37510B00BBD9B0 /* MimicUITests */,
+				29B5746A2F377CFC00BBD9B0 /* DeviceActivityMonitorExtension */,
+				29B5747F2F3781E500BBD9B0 /* PetWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +405,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		29B574382F37510B00BBD9B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29B574692F377CFC00BBD9B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29B5747E2F3781E500BBD9B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +449,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29B574672F377CFC00BBD9B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29B5747C2F3781E500BBD9B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +475,16 @@
 			isa = PBXTargetDependency;
 			target = 29B574222F37510500BBD9B0 /* Mimic */;
 			targetProxy = 29B5743B2F37510B00BBD9B0 /* PBXContainerItemProxy */;
+		};
+		29B574752F377CFD00BBD9B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29B5746A2F377CFC00BBD9B0 /* DeviceActivityMonitorExtension */;
+			targetProxy = 29B574742F377CFD00BBD9B0 /* PBXContainerItemProxy */;
+		};
+		29B574942F3781E800BBD9B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29B5747F2F3781E500BBD9B0 /* PetWidgetExtensionExtension */;
+			targetProxy = 29B574932F3781E800BBD9B0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,11 +615,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mimic/Mimic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V8U7G8VKD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mimic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -427,11 +649,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mimic/Mimic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V8U7G8VKD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mimic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -538,6 +762,124 @@
 			};
 			name = Release;
 		};
+		29B574792F377CFD00BBD9B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V8U7G8VKD3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceActivityMonitorExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivityMonitorExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcmanzke.Mimic.DeviceActivityMonitorExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29B5747A2F377CFD00BBD9B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V8U7G8VKD3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceActivityMonitorExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivityMonitorExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcmanzke.Mimic.DeviceActivityMonitorExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		29B574982F3781E800BBD9B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V8U7G8VKD3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PetWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PetWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcmanzke.Mimic.PetWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29B574992F3781E800BBD9B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V8U7G8VKD3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PetWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PetWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcmanzke.Mimic.PetWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -577,7 +919,49 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		29B574782F377CFD00BBD9B0 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitorExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29B574792F377CFD00BBD9B0 /* Debug */,
+				29B5747A2F377CFD00BBD9B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29B574972F3781E800BBD9B0 /* Build configuration list for PBXNativeTarget "PetWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29B574982F3781E800BBD9B0 /* Debug */,
+				29B574992F3781E800BBD9B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29B574D32F378DAE00BBD9B0 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.15.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29B574D42F378DAE00BBD9B0 /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29B574D32F378DAE00BBD9B0 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+		29B574D62F3790F300BBD9B0 /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29B574D32F378DAE00BBD9B0 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 29B5741B2F37510500BBD9B0 /* Project object */;
 }

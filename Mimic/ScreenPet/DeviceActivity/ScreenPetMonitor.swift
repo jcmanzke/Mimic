@@ -5,26 +5,34 @@
 //  Created for ScreenPet.
 //  IMPORTANT: This file belongs in the "DeviceActivityMonitor Extension" target.
 //
+
 import DeviceActivity
 import ManagedSettings
 import Foundation
+import Combine
+
 // Note: You need to make sure VitalityManager is accessible here (e.g. via specific file membership or shared framework)
-// OR interact with Shared Defaults / SwiftData.
+// OR interact with Shared Defaults / SwiftData. 
 // Since we used SwiftData, the ModelContainer needs to be set up here too.
+
 class DeviceActivityMonitorExtension: DeviceActivityMonitor {
     
-    override func intervalDidStart(for activity: DeviceActivityName) {
+    nonisolated override init() {
+        super.init()
+    }
+    
+    nonisolated override func intervalDidStart(for activity: DeviceActivityName) {
         super.intervalDidStart(for: activity)
         print("Interval did start")
     }
     
-    override func intervalDidEnd(for activity: DeviceActivityName) {
+    nonisolated override func intervalDidEnd(for activity: DeviceActivityName) {
         super.intervalDidEnd(for: activity)
         print("Interval did end")
         // Maybe calculate total usage here?
     }
     
-    override func eventDidReachThreshold(_ event: DeviceActivityEvent.Name, activity: DeviceActivityName) {
+    nonisolated override func eventDidReachThreshold(_ event: DeviceActivityEvent.Name, activity: DeviceActivityName) {
         super.eventDidReachThreshold(event, activity: activity)
         
         // Handle health deduction
@@ -43,15 +51,15 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         }
     }
     
-    override func intervalWillStartWarning(for activity: DeviceActivityName) {
+    nonisolated override func intervalWillStartWarning(for activity: DeviceActivityName) {
         super.intervalWillStartWarning(for: activity)
     }
     
-    override func intervalWillEndWarning(for activity: DeviceActivityName) {
+    nonisolated override func intervalWillEndWarning(for activity: DeviceActivityName) {
         super.intervalWillEndWarning(for: activity)
     }
     
-    override func eventWillReachThresholdWarning(_ event: DeviceActivityEvent.Name, activity: DeviceActivityName) {
+    nonisolated override func eventWillReachThresholdWarning(_ event: DeviceActivityEvent.Name, activity: DeviceActivityName) {
         super.eventWillReachThresholdWarning(event, activity: activity)
     }
 }
