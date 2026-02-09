@@ -39,17 +39,134 @@
 - **Dynamic Island (Expanded)**: Shows the animated pet and a "Time Remaining" countdown before the next health drop.
 - **Constraints**: Must update via push notifications or background tasks to stay within the 12-hour Live Activity limit.
 
-## 4. Animation Mapping (Rive State Machine)
-The Coding Agent should map health values to Rive State Machine inputs:
+## 4. Pet States & Visuals
 
+### A. States (Health Driven)
+The pet's state is determined by the `health` value (0-100).
+
+| State | Health Range | Description | Asset Name |
+| :--- | :--- | :--- | :--- |
+| **Happy** | 80% - 100% | Pet is energetic, happy, glowing. | `1_pet_happy` |
+| **Neutral** | 40% - 79% | Pet is content but normal. | `2_pet_neutral` |
+| **Sad** | 10% - 39% | Pet looks tired, droopy, maybe glitching. | `3_pet_sad` |
+| **Critical** | < 10% | Pet looks very sick, fainting, close to death. | `4_pet_critical` |
+| **Sleeping** | (Time-based)| Active during "Sleeping Hours" (e.g. 10 PM - 6 AM) or DND. | `0_pet_sleeping` |
+
+### B. Asset Requirements (Phase 1: Static PNGs)
+For the initial implementation, we will use static PNG images to establish the visual identity before moving to Rive animations.
+
+- **File Format**: PNG
+- **Background**: Transparent
+- **Resolution**: ~500x500px (recommended for high DPI displays)
+- **Location**: `Mimic/Assets.xcassets`
+- **Action**: Create a **New Image Set** for each state with the exact names listed above. Note: User has provided assets: `0_pet_sleeping`, `1_pet_happy`, `2_pet_neutral`, `3_pet_sad`, `4_pet_critical`.
+
+### C. Animation Mapping (Future: Rive State Machine)
+Eventually, these states will map to Rive inputs:
 - **Input**: `healthValue` (Double): 0-100.
-- **States**:
-    - **100 - 80**: Trigger "Happy/Idle"
-    - **79 - 40**: Trigger "Neutral/Bored"
-    - **39 - 10**: Trigger "Sad/Tired"
-    - **< 10**: Trigger "Fainting"
+- **Triggers**: "Happy/Idle", "Neutral/Bored", "Sad/Tired", "Fainting".
 
 ## 5. Implementation Rules for the AI Agent
 - **Privacy First**: Never attempt to log specific app names; only use Apple's DeviceActivity categories to protect user privacy.
 - **Battery Efficiency**: Limit Live Activity updates to once every minute or when a significant health change occurs.
 - **State Persistence**: Always save the current health and lastUpdateTimestamp to UserDefaults or SwiftData to prevent data loss on app kill.
+
+---
+
+## 6. Pet Modes (Variants)
+
+The app supports 3 emotional narrative modes. Users can switch via Settings. **Default: Guardian**.
+
+| Mode | Enum Value | Pet Identity | Core Emotion |
+|:---|:---|:---|:---|
+| **The Reflection** | `.reflection` | Digital twin of user | Self-compassion |
+| **The Guardian** | `.guardian` | Vulnerable creature to protect | Protective duty |
+| **The Echo** | `.echo` | User's future self | Aspiration |
+
+### Guardian Mode (Default) — Key Elements
+- **Pet Name**: Lumi (fixed for MVP)
+- **Narrative**: User is protector; phone is habitat
+- **Sanctuary Stages**: 3 levels (Barren → Growing → Paradise)
+- **Rescue Missions**: Simple "Put your phone down" prompt
+- **Notifications**: At health thresholds (75%, 50%, 25%)
+
+### Implementation
+- `PetMode` enum in `PetMode.swift`
+- Mode-specific narrative in `Narrative/<ModeName>Narrative.swift`
+- Current mode stored in `UserDefaults` via `@AppStorage("petMode")`
+
+---
+
+## 7. Design System
+
+> [!IMPORTANT]
+> **All UI/UX changes MUST use this design system.** Do not use hardcoded colors or arbitrary fonts.
+
+### A. Color Palette
+
+```swift
+// Usage: Color.theme.primary
+extension Color {
+    static let theme = ColorTheme()
+}
+
+struct ColorTheme {
+    let primary = Color(hex: "A8E6CF")      // Mint - healthy, positive
+    let secondary = Color(hex: "DDA0DD")    // Lavender - accent, stats
+    let warning = Color(hex: "FFB347")      // Peach - warning states
+    let critical = Color(hex: "FF6B6B")     // Coral - critical, alerts
+    
+    let backgroundStart = Color(hex: "F5E6D3")  // Warm cream
+    let backgroundEnd = Color(hex: "E8D5E3")    // Soft pink
+    
+    let cardBackground = Color.white.opacity(0.6)
+    let cardBorder = Color.white.opacity(0.3)
+    
+    let textPrimary = Color(hex: "2D3436")   // Charcoal
+    let textSecondary = Color(hex: "636E72") // Gray
+}
+```
+
+### B. Typography
+
+| Style | Font | Size | Weight | Usage |
+|:---|:---|:---|:---|:---|
+| `largeTitle` | SF Rounded | 32pt | Bold | Screen titles |
+| `title` | SF Rounded | 24pt | Semibold | Section headers |
+| `headline` | SF Pro | 17pt | Semibold | Card titles |
+| `body` | SF Pro | 15pt | Regular | Body text |
+| `caption` | SF Pro | 12pt | Regular | Labels, hints |
+
+### C. Component Tokens
+
+| Component | Specification |
+|:---|:---|
+| **Glass Card** | Corner radius: 24px, Blur: 20px, Border: 1px `cardBorder` |
+| **Primary Button** | Pill, 44px height, gradient fill (`primary` to `secondary`) |
+| **Secondary Button** | Pill, white fill, subtle shadow |
+| **Icon Button** | Circle 48px, glass background |
+| **Stat Card** | 160×100px, glass, colored accent bar |
+| **Tab Bar** | 5 icons, floating glass style |
+
+### D. Modifiers (SwiftUI)
+
+```swift
+.glassCard()           // Apply glass card styling
+.appBackground()       // Apply gradient background
+.primaryButtonStyle()  // Primary button appearance
+```
+
+---
+
+## 8. UI/UX Development Rules
+
+> [!CAUTION]
+> These rules are MANDATORY for any UI changes.
+
+1. **Use Design Tokens**: All colors via `Color.theme.*`, all fonts via `Font.appFont.*`
+2. **Glass Morphism**: Cards must use `.glassCard()` modifier
+3. **Consistent Spacing**: Use multiples of 8px (8, 16, 24, 32...)
+4. **Accessibility**: Minimum touch target 44×44px
+5. **Animation**: Use `.spring()` for interactive elements
+6. **Dark Mode**: Not required for MVP; design for light mode only
+7. **Reference File**: [DesignSystem.swift](file:///Users/christianmanzke/Desktop/GitHub/Mimic/Mimic/ScreenPet/UI/DesignSystem.swift)

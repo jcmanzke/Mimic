@@ -6,8 +6,44 @@ import SwiftUI
 class VitalityManager {
     var health: Double = 1.0
     var scars: Int = 0
+    var guardianStreak: Int = 0
     private var modelContext: ModelContext?
     private var currentPet: PetEntity?
+    
+    // Pet mode (persisted in UserDefaults)
+    var currentMode: PetMode {
+        get {
+            if let raw = UserDefaults.standard.string(forKey: "petMode"),
+               let mode = PetMode(rawValue: raw) {
+                return mode
+            }
+            return .guardian // Default
+        }
+        set {
+            UserDefaults.standard.set(newValue.rawValue, forKey: "petMode")
+        }
+    }
+    
+    /// Current narrative message based on mode and health
+    var narrativeMessage: String {
+        switch currentMode {
+        case .guardian:
+            return GuardianNarrative.messageForHealth(health)
+        case .reflection, .echo:
+            // Placeholder for other modes
+            return "Health: \(Int(health * 100))%"
+        }
+    }
+    
+    /// Asset name for current health state
+    var currentPetAsset: String {
+        switch health {
+        case 0.8...1.0: return "1_pet_happy"
+        case 0.4..<0.8: return "2_pet_neutral"
+        case 0.1..<0.4: return "3_pet_sad"
+        default: return "4_pet_critical"
+        }
+    }
     
     // Constants
     private let decayRatePerMinute: Double = 0.01 // 1%
