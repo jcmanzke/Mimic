@@ -29,8 +29,14 @@ struct SettingsView: View {
                         
                         // About Section
                         aboutSection
+                        
+#if DEBUG
+                        // Developer Controls
+                        developerSection
+#endif
                     }
-                    .padding(16)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 24)
                 }
             }
             .navigationTitle("Settings")
@@ -153,6 +159,75 @@ struct SettingsView: View {
         .padding(16)
         .glassCard()
     }
+    
+#if DEBUG
+    // MARK: - Developer Menu
+    private var developerSection: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack {
+                Image(systemName: "wrench.and.screwdriver.fill")
+                    .foregroundColor(Color.theme.warning)
+                Text("Developer Menu")
+                    .font(.appFont.headline)
+                    .foregroundColor(Color.theme.warning)
+            }
+            
+            VStack(spacing: 12) {
+                Button(action: { vitalityManager.decompose(minutes: 10) }) {
+                    HStack {
+                        Image(systemName: "minus.circle.fill")
+                        Text("Deduct 10% Health")
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(BorderedProminentButtonStyle())
+                .tint(Color.theme.warning)
+                
+                Button(action: { vitalityManager.decompose(minutes: 50) }) {
+                    HStack {
+                        Image(systemName: "minus.circle.fill")
+                        Text("Deduct 50% Health")
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(BorderedProminentButtonStyle())
+                .tint(Color.theme.critical)
+                
+                Button(action: { vitalityManager.recover(minutes: 200) }) { // 200 mins = +10%
+                    HStack {
+                        Image(systemName: "plus.circle.fill")
+                        Text("Add 10% Health")
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(BorderedProminentButtonStyle())
+                .tint(Color.theme.primary)
+                
+                Button(action: {
+                    // Force zero health then trigger check for new day logic validation
+                    vitalityManager.decompose(minutes: 100)
+                }) {
+                    HStack {
+                        Image(systemName: "xmark.octagon.fill")
+                        Text("Kill Pet (0% Health)")
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(BorderedProminentButtonStyle())
+                .tint(Color.black)
+            }
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 24)
+                .fill(Color.black.opacity(0.05))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 24)
+                        .stroke(Color.theme.warning, style: StrokeStyle(lineWidth: 2, dash: [5]))
+                )
+        )
+    }
+#endif
     
     // MARK: - Helpers
     private func iconForMode(_ mode: PetMode) -> String {

@@ -4,6 +4,7 @@ import SwiftData
 struct PetDashboardView: View {
     @State private var vitalityManager: VitalityManager
     @State private var showingSettings = false
+    @State private var wobbleAmount: Double = 0 // Track the current tilt
     
     init(modelContext: ModelContext) {
         let vm = VitalityManager(modelContext: modelContext)
@@ -12,9 +13,6 @@ struct PetDashboardView: View {
     
     var body: some View {
         ZStack {
-            // Background
-            Color.clear.appBackground()
-            
             VStack(spacing: 24) {
                 // Header
                 headerSection
@@ -35,8 +33,11 @@ struct PetDashboardView: View {
                 
                 Spacer()
             }
-            .padding(.horizontal, 16)
+            .padding(.horizontal, 24)
+            .padding(.top, 16)
+            .padding(.bottom, 24)
         }
+        .appBackground()
         .sheet(isPresented: $showingSettings) {
             SettingsView(vitalityManager: vitalityManager)
         }
@@ -94,6 +95,37 @@ struct PetDashboardView: View {
                 .scaledToFit()
                 .frame(width: 180, height: 180)
                 .shadow(color: Color.theme.colorForHealth(vitalityManager.health).opacity(0.5), radius: 20)
+                // 1. Apply the rotation based on our state variable
+                .rotationEffect(.degrees(wobbleAmount))
+                // 2. Add an action on tap
+                .onTapGesture {
+                    // Trigger haptic feedback (optional but feels good)
+                    let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                    impactMed.impactOccurred()
+                    
+                    // Trigger the animation
+                    withAnimation(
+                        .spring(response: 0.2, dampingFraction: 0.2, blendDuration: 0)
+                    ) {
+                        wobbleAmount = 15 // Tilt right
+                    }
+                    
+                    // Reset back to center shortly after
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                        withAnimation(
+                            .spring(response: 0.3, dampingFraction: 0.4, blendDuration: 0)
+                        ) {
+                            wobbleAmount = -10 // Tilt slightly left
+                        }
+                    }
+                    
+                    // Settle back to 0
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        withAnimation(.spring(response: 0.4, dampingFraction: 0.5)) {
+                            wobbleAmount = 0
+                        }
+                    }
+                }
             
             // Health Ring
             Circle()
@@ -150,14 +182,14 @@ struct PetDashboardView: View {
                 .foregroundColor(Color.theme.textSecondary)
             
             HStack(spacing: 12) {
-                Button("Distract (-5%)") {
-                    vitalityManager.decompose(minutes: 5)
+                Button("Damage (-20%)") {
+                    vitalityManager.adjustHealth(by: -0.2)
                     LiveActivityManager.shared.update(health: vitalityManager.health, state: "Distracted")
                 }
                 .buttonStyle(SecondaryButtonStyle())
                 
-                Button("Recover (+10m)") {
-                    vitalityManager.recover(minutes: 10)
+                Button("Heal (+20%)") {
+                    vitalityManager.adjustHealth(by: 0.2)
                     LiveActivityManager.shared.update(health: vitalityManager.health, state: "Healing")
                 }
                 .buttonStyle(PrimaryButtonStyle())

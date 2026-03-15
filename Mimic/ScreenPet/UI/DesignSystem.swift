@@ -104,6 +104,7 @@ struct AppBackgroundModifier: ViewModifier {
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing
                 )
+                // Appended strictly to the background gradient, not the content's outer bounds
                 .ignoresSafeArea()
             )
     }
@@ -195,16 +196,22 @@ struct StatCard: View {
             Text(title)
                 .font(.appFont.caption)
                 .foregroundColor(Color.theme.textSecondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
             
             Text(value)
                 .font(.appFont.largeTitle)
                 .foregroundColor(accentColor)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
             
             Text(subtitle)
                 .font(.appFont.caption)
                 .foregroundColor(Color.theme.textSecondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
         }
-        .frame(width: 160, height: 100, alignment: .leading)
+        .frame(maxWidth: .infinity, minHeight: 100, alignment: .leading)
         .padding(16)
         .glassCard()
         .overlay(

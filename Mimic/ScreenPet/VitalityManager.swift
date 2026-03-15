@@ -144,6 +144,11 @@ class VitalityManager {
         updatePetState()
     }
     
+    func adjustHealth(by amount: Double) {
+        health = max(0, min(1.0, health + amount))
+        updatePetState()
+    }
+    
     private func updatePetState() {
         currentPet?.currentHealth = health
         save()
