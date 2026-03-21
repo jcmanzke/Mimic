@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mimic — Your Time is a Gift to Them</title>
+    <meta name="description"
+        content="Mimic is a digital wellbeing app that transforms your screen time habits. Raise Lumi, your virtual companion, by staying focused and mindful." />
+    <link rel="canonical" href="https://www.life-strategizer.com/" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-container": "#380002",
+                        "secondary": "#785754",
+                        "on-primary-fixed": "#000000",
+                        "on-secondary-container": "#694a47",
+                        "surface-variant": "#dee3e6",
+                        "surface-container-high": "#e5e9eb",
+                        "surface-bright": "#f8f9fa",
+                        "outline": "#767c7e",
+                        "background": "#f8f9fa",
+                        "surface-dim": "#d5dbdd",
+                        "on-tertiary-fixed-variant": "#6b4a1b",
+                        "tertiary-fixed-dim": "#eabc82",
+                        "surface-container": "#ebeef0",
+                        "on-secondary-fixed": "#553835",
+                        "error": "#a8364b",
+                        "surface-container-highest": "#dee3e6",
+                        "on-error-container": "#6e0523",
+                        "on-tertiary-container": "#614112",
+                        "on-error": "#fff7f7",
+                        "error-dim": "#6b0221",
+                        "primary-fixed": "#f8675d",
+                        "inverse-on-surface": "#9b9d9e",
+                        "tertiary-fixed": "#f9c98e",
+                        "primary": "#ae322d",
+                        "tertiary-container": "#f9c98e",
+                        "surface-tint": "#ae322d",
+                        "tertiary": "#7c5828",
+                        "inverse-surface": "#0c0f10",
+                        "inverse-primary": "#f8675d",
+                        "surface": "#f8f9fa",
+                        "secondary-fixed-dim": "#f6cac6",
+                        "on-primary-fixed-variant": "#4d0004",
+                        "on-surface-variant": "#5a6062",
+                        "tertiary-dim": "#6e4c1d",
+                        "primary-fixed-dim": "#e65b52",
+                        "on-background": "#2d3335",
+                        "outline-variant": "#adb3b5",
+                        "secondary-fixed": "#ffdad6",
+                        "on-secondary": "#fff7f6",
+                        "on-secondary-fixed-variant": "#745350",
+                        "surface-container-low": "#f1f4f5",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-dim": "#6b4b48",
+                        "on-surface": "#2d3335",
+                        "secondary-container": "#ffdad6",
+                        "primary-dim": "#9d2523",
+                        "primary-container": "#f8675d",
+                        "on-tertiary": "#fff7f3",
+                        "error-container": "#f97386",
+                        "on-tertiary-fixed": "#4b2e01",
+                        "on-primary": "#fff7f6"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+
+        .lumi-gradient {
+            background: linear-gradient(135deg, #EB5E55 0%, #ae322d 100%);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #2d3335, #767c7e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-100 shadow-sm font-['Plus_Jakarta_Sans'] antialiased">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-bold tracking-tighter text-[#EB5E55]">Mimic</div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-[#EB5E55] font-semibold border-b-2 border-[#EB5E55] pb-1" href="#">The Sanctuary</a>
+                <a class="text-slate-600 hover:text-[#EB5E55] transition-colors" href="#features">Features</a>
+                <a class="text-slate-600 hover:text-[#EB5E55] transition-colors" href="#modes">Modes</a>
+            </div>
+            <button
+                class="bg-[#EB5E55] text-white px-6 py-2.5 rounded-full font-semibold hover:opacity-80 transition-opacity active:scale-95 duration-200">
+                Download Now
+            </button>
+        </div>
+    </nav>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-[921px] flex items-center overflow-hidden px-8">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="z-10 space-y-8">
+                    <span
+                        class="inline-block px-4 py-1.5 rounded-full bg-primary-container/10 text-primary font-semibold text-sm tracking-wide uppercase">Digital
+                        Wellbeing reimagined</span>
+                    <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight leading-[1.1] text-on-background">
+                        Your Time is a <span class="text-[#EB5E55]">Gift</span> to Them.
+                    </h1>
+                    <p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                        Lumi thrives when you focus. Every minute you stay away from distractions builds their
+                        Sanctuary. Reclaim your focus, nourish your companion.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button
+                            class="px-8 py-4 bg-primary text-on-primary rounded-full font-bold text-lg hover:shadow-xl hover:shadow-primary/20 transition-all flex items-center gap-3 active:scale-95">
+                            Protect Lumi
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </button>
+                        <button
+                            class="px-8 py-4 bg-white border border-outline-variant text-on-surface rounded-full font-bold text-lg hover:bg-surface-container transition-colors active:scale-95">
+                            Watch the Story
+                        </button>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-1000">
+                    </div>
+                    <div
+                        class="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-primary/5">
+                        <img alt="Happy Lumi Turtle"
+                            class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[2s] object-contain p-8"
+                            data-alt="A happy, smiling green turtle companion"
+                            src="https://lh3.googleusercontent.com/aida/ADBb0uiSsbU0oGuDBRLhYy6tUb0DtydWVepfatjS8A9Gm_BHlCz2K5fn5GRfGB1948FhKSlm14TdW_BdVfqzMqKbE-yVkbz_sv9AVxz_BN6ymEziHL5-7XzN2ukXenLNqVg3pgw679So_8CkzwqLAZprTLjBe2-wLXfo13rZTsi7iqvRVooEgL5ylRkUq8KsTzjC7Z-Rzitqb8_CtqvP-eJ3baf1F--wj4J5bGfSgP4gKgDA1zD_1qKAz05lxl4psLWV-oLEAn304kXE9w" />
+                        <!-- Pet Health Ring Overlay -->
+                        <div
+                            class="absolute bottom-8 left-8 right-8 glass-effect p-6 rounded-2xl border border-white/50 shadow-lg">
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Lumi's
+                                    Sanctuary Health</span>
+                                <span class="text-2xl font-black text-primary">88%</span>
+                            </div>
+                            <div class="w-full bg-surface-variant h-3 rounded-full overflow-hidden">
+                                <div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- The Core Loop -->
+        <section id="features" class="py-32 bg-surface-container-low px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-24">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">The Cycle of Care</h2>
+                    <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">A simple ritual to transform your
+                        digital habits into meaningful growth for Lumi.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Step 1 -->
+                    <div class="group">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="material-symbols-outlined text-primary text-3xl">timer</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">1. Setup Distractions</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Choose the apps that steal your time. When
+                            you lock them away, Lumi's protective shield activates.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="group">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="material-symbols-outlined text-primary text-3xl">spa</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">2. Live Healthy</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Focus on your deep work or meaningful rest.
+                            Every focused minute generates 'Ethereal Essence' for Lumi.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="group">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">3. Watch Lumi Thrive</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Return to find Lumi evolved. Better health,
+                            new sanctuary items, and a deeper bond through your discipline.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Narrative Modes -->
+        <section id="modes" class="py-32 px-8 overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                    <div class="max-w-xl">
+                        <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">Different
+                            Focus,<br />Different Results.</h2>
+                        <p class="text-on-surface-variant text-lg">Choose how you want to protect your time and grow
+                            your companion.</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <button
+                            class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-surface-variant transition-colors">
+                            <span class="material-symbols-outlined">arrow_back</span>
+                        </button>
+                        <button
+                            class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-surface-variant transition-colors">
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Guardian Card -->
+                    <div
+                        class="bg-white rounded-[2rem] p-10 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full">
+                        <div class="text-[#EB5E55] mb-8">
+                            <span class="material-symbols-outlined text-5xl"
+                                style="font-variation-settings: 'FILL' 1;">shield</span>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">Guardian</h3>
+                        <p class="text-on-surface-variant mb-8 flex-grow">The ultimate focus mode. Apps are strictly
+                            locked, and any attempt to exit directly impacts Lumi's immediate health. High stakes, high
+                            growth.</p>
+                        <div class="pt-6 border-t border-slate-50 flex justify-between items-center">
+                            <span class="text-sm font-bold uppercase tracking-widest text-primary">High Intensity</span>
+                            <span class="material-symbols-outlined text-outline">trending_up</span>
+                        </div>
+                    </div>
+                    <!-- Reflection Card -->
+                    <div
+                        class="bg-surface-container-high rounded-[2rem] p-10 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full">
+                        <div class="text-tertiary mb-8">
+                            <span class="material-symbols-outlined text-5xl"
+                                style="font-variation-settings: 'FILL' 1;">self_improvement</span>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">Reflection</h3>
+                        <p class="text-on-surface-variant mb-8 flex-grow">A gentle approach. Prompts you with mindful
+                            questions before unlocking apps. Lumi remains calm, encouraging a balanced digital diet.</p>
+                        <div class="pt-6 border-t border-slate-200/50 flex justify-between items-center">
+                            <span class="text-sm font-bold uppercase tracking-widest text-tertiary">Mindful
+                                Balance</span>
+                            <span class="material-symbols-outlined text-outline">calendar_today</span>
+                        </div>
+                    </div>
+                    <!-- Echo Card -->
+                    <div
+                        class="bg-white rounded-[2rem] p-10 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full">
+                        <div class="text-secondary mb-8">
+                            <span class="material-symbols-outlined text-5xl"
+                                style="font-variation-settings: 'FILL' 1;">water_drop</span>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">Echo</h3>
+                        <p class="text-on-surface-variant mb-8 flex-grow">Passive focus. Lumi mimics your usage. Spend
+                            too much time on screen, and Lumi becomes sluggish. Put it down, and Lumi regains vitality.
+                        </p>
+                        <div class="pt-6 border-t border-slate-50 flex justify-between items-center">
+                            <span class="text-sm font-bold uppercase tracking-widest text-secondary">Passive Sync</span>
+                            <span class="material-symbols-outlined text-outline">sync</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Live Activities Section -->
+        <section class="py-32 bg-white px-8">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <!-- Dynamic Island Mockup -->
+                    <div
+                        class="max-w-sm mx-auto bg-black rounded-[4rem] p-4 shadow-2xl relative overflow-hidden aspect-[9/19] border-[12px] border-[#222]">
+                        <div
+                            class="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-black rounded-full z-20 flex items-center justify-between px-4">
+                            <img alt="Mini Lumi" class="w-5 h-5 rounded-full object-cover"
+                                data-alt="Small avatar of digital pet"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyZkqRceRAzxX5Pc0KtVC1A9DsLF0voZgIRqdXKUuFybS3H8GRsBpeuFd3dY8onKueuAof3jK5PLOPA4U6az7_oUi7NF2TJOPaHXZLAEhb8N2jveBw5cc6GEh7R7mm_aoygZuOTbSXq7OLwe63Nw-uWa8EkEbqupNsEjNBrLxSWYVLcqtKsPsz0md1hHdDAQyzw-Rhq96YkDK148wKcTxJX5lDCMvcJUV1e-t-S--YE26fDfkLd_d2brNzZvYlA-vexQfmaZlciajR" />
+                            <div class="flex gap-1">
+                                <div class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></div>
+                                <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div class="h-full w-full bg-[#111] pt-20 px-6">
+                            <div class="w-full aspect-square rounded-3xl overflow-hidden mb-6">
+                                <img alt="Lumi in garden" class="w-full h-full object-cover opacity-80"
+                                    data-alt="Digital pet in a lush green garden"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP5bG9gwocmuREvQNgB2nvTTbOa5Hge8iErDwaosunIWzSHh53DIaY04gp8ZFtAYeMb9LSdLefHH7xK7VA59hu4E9Ax4duRqZ7GKXneP4GgFumcfH7pUlMUQfk_DCxr-bkgFbxzhoB8g9-MSPgM7BJMrsjwTZk6lG5-rqTLI3luUPMqpA2nvO1aitSer8R5He1N3IQpq-mJSPp3ihpcZlYt0u9xfxlcYClchjoPHlXSkTgpuszLgITZxeP2PdxMXhubG-Huu7zZ-VF" />
+                            </div>
+                            <div class="space-y-4">
+                                <div class="h-4 w-3/4 bg-white/10 rounded-full"></div>
+                                <div class="h-4 w-1/2 bg-white/5 rounded-full"></div>
+                                <div class="mt-8 p-4 rounded-2xl bg-primary/20 border border-primary/30">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-[10px] text-primary-fixed uppercase font-bold">Live
+                                            Focus</span>
+                                        <span class="text-xs text-white">45:00</span>
+                                    </div>
+                                    <div class="h-1 w-full bg-white/10 rounded-full">
+                                        <div class="h-full bg-primary w-2/3 rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative Floating Elements -->
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-tertiary/10 rounded-full blur-3xl"></div>
+                </div>
+                <div class="order-1 lg:order-2 space-y-8">
+                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Always
+                        Present,<br />Never Intrusive.</h2>
+                    <p class="text-xl text-on-surface-variant leading-relaxed">
+                        With <strong>Live Activities</strong> and <strong>Dynamic Island</strong> integration, Lumi
+                        stays by your side even when
+                        your phone is locked. Glance at your progress without ever opening a distraction.
+                    </p>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary text-xl">notifications_active</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Real-time Feedback</h4>
+                                <p class="text-on-surface-variant">See Lumi's mood shift as you reach focus milestones
+                                    on your lock screen.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary text-xl">grid_view</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Widget Ecosystem</h4>
+                                <p class="text-on-surface-variant">Customizable home screen widgets that show your
+                                    Sanctuary's current state.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA -->
+        <section class="py-32 px-8">
+            <div
+                class="max-w-5xl mx-auto relative rounded-[3rem] overflow-hidden bg-[#1a1a1a] p-12 md:p-24 text-center text-white">
+                <div class="absolute inset-0 opacity-30">
+                    <img alt="Starry background" class="w-full h-full object-cover"
+                        data-alt="Abstract dark aesthetic texture with soft red glows"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUFT-i7l_VqqvBskFssBo78socb9A6WPQParNGf2kZd_wCK2NwYtmIUOcOjIZVFA4dzHRl0gJ5WcLOyWJ8VNLNMmIZsT7V9iNe0sfgdeE_vLb4XSk8Ds7bGpjqoy8dZHDjS6oZmRye1k7W_l4aiYQuaiQQ1Qeg45saIOKHD81r4vXE0MTL4C7eR6Hd0dwFaBANou9btXI0eZNFeKjGh-5iXx73VzCAizn2pePlzNiyXAejoAxJnRmBc6Ib6ga87hI_aorL6CgVhlPj" />
+                </div>
+                <div class="relative z-10 space-y-10">
+                    <h2 class="text-5xl md:text-7xl font-extrabold tracking-tighter">Start Your Sanctuary.</h2>
+                    <p class="text-xl text-white/70 max-w-xl mx-auto leading-relaxed">Join 50,000+ users who have
+                        transformed their relationship with their devices while raising their own Lumi.</p>
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                        <button
+                            class="bg-white text-black px-10 py-5 rounded-full font-bold text-xl hover:bg-primary-fixed transition-all flex items-center gap-4 group">
+                            <span class="material-symbols-outlined text-2xl"
+                                style="font-variation-settings: 'FILL' 1;">ios</span>
+                            App Store
+                        </button>
+                        <div class="flex items-center gap-4 text-white/50">
+                            <div class="flex -space-x-3">
+                                <div class="w-10 h-10 rounded-full border-2 border-black bg-slate-400"></div>
+                                <div class="w-10 h-10 rounded-full border-2 border-black bg-slate-500"></div>
+                                <div class="w-10 h-10 rounded-full border-2 border-black bg-slate-600"></div>
+                            </div>
+                            <span class="text-sm font-medium">4.9/5 Rating on iOS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-12 border-t border-slate-200 bg-slate-50 font-['Plus_Jakarta_Sans'] text-sm">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-4">
+            <div class="text-lg font-bold text-slate-900">Mimic</div>
+            <div class="flex gap-8 text-slate-500">
+                <a class="hover:text-[#EB5E55] transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-[#EB5E55] transition-colors" href="#">Terms of Service</a>
+                <a class="hover:text-[#EB5E55] transition-colors" href="#">Contact</a>
+            </div>
+            <div class="text-slate-500">
+                © 2026 Mimic Digital Wellbeing. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
