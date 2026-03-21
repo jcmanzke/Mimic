@@ -70,6 +70,7 @@ Eventually, these states will map to Rive inputs:
 - **Privacy First**: Never attempt to log specific app names; only use Apple's DeviceActivity categories to protect user privacy.
 - **Battery Efficiency**: Limit Live Activity updates to once every minute or when a significant health change occurs.
 - **State Persistence**: Always save the current health and lastUpdateTimestamp to UserDefaults or SwiftData to prevent data loss on app kill.
+- **Keep `agents.md` Updated**: Whenever a new component, feature, folder, or external asset (website, tool, etc.) is added to this repository, this file must be updated accordingly to reflect the change. This applies to both the AI agent and the developer.
 
 ---
 
@@ -102,4 +103,26 @@ The app supports 3 emotional narrative modes. Users can switch via Settings. **D
 > [!IMPORTANT]
 > All design-related documentation, including our design system tokens, colors, typography, and spacing rules, has been moved to `design.md`.
 > Please refer to `design.md` for any UI/UX implementation details.
+
+---
+
+## 8. Repository Structure
+
+This repository contains more than just the iOS app. Below is an overview of all major components:
+
+| Folder / File | Description |
+|:---|:---|
+| `Mimic/` | Main iOS app source code (SwiftUI, Swift 6) |
+| `PetWidgetExtension/` | Home screen & lock screen widget target |
+| `DeviceActivityMonitorExtension/` | Screen time monitoring extension |
+| `docs/` | **Landing page** hosted via GitHub Pages at `www.life-strategizer.com` |
+| `Desktop Landing Page/` | Original source file for the landing page (for reference) |
+| `design.md` | Design system tokens, colors, typography, spacing |
+| `agents.md` | This file — system overview and AI agent rules |
+
+### Landing Page (`docs/index.html`)
+- A single-page HTML/CSS marketing site for the Mimic app
+- Uses **Tailwind CSS** (CDN) and **Plus Jakarta Sans** (Google Fonts)
+- Sections: Hero, Cycle of Care, Modes (Guardian / Reflection / Echo), Live Activities, CTA, Footer
+- Hosted via **GitHub Pages** connected to the custom domain `www.life-strategizer.com` via Strato DNS
 
