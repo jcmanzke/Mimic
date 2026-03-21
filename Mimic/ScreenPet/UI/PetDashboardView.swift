@@ -13,29 +13,28 @@ struct PetDashboardView: View {
     
     var body: some View {
         ZStack {
-            VStack(spacing: 24) {
-                // Header
-                headerSection
-                
-                // Pet Display Area
-                petDisplaySection
-                
-                // Narrative Message
-                narrativeSection
-                
-                // Stats Cards
-                statsSection
-                
-                // Testing Controls (Remove in production)
-                #if DEBUG
-                testingControls
-                #endif
-                
-                Spacer()
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 24) {
+                    // Header
+                    headerSection
+                    
+                    // Pet Display Area
+                    petDisplaySection
+                    
+                    // Impact & Vitality Stats
+                    impactSection
+                    
+                    // Testing Controls (Remove in production)
+                    #if DEBUG
+                    testingControls
+                    #endif
+                    
+                    Spacer(minLength: 40)
+                }
+                .padding(.horizontal, 24)
+                .padding(.top, 16)
+                .padding(.bottom, 24)
             }
-            .padding(.horizontal, 24)
-            .padding(.top, 16)
-            .padding(.bottom, 24)
         }
         .appBackground()
         .sheet(isPresented: $showingSettings) {
@@ -144,31 +143,34 @@ struct PetDashboardView: View {
         }
     }
     
-    // MARK: - Narrative
-    private var narrativeSection: some View {
-        Text(vitalityManager.narrativeMessage)
-            .font(.appFont.headline)
-            .foregroundColor(Color.theme.textSecondary)
-            .multilineTextAlignment(.center)
-            .padding(.horizontal, 32)
-            .animation(.easeInOut, value: vitalityManager.health)
-    }
-    
-    // MARK: - Stats
-    private var statsSection: some View {
-        HStack(spacing: 16) {
-            StatCard(
-                title: "Health",
-                value: "\(Int(vitalityManager.health * 100))%",
-                subtitle: healthSubtitle,
-                accentColor: Color.theme.colorForHealth(vitalityManager.health)
-            )
+    // MARK: - Impact & Stats Sections
+    private var impactSection: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text("CURRENT IMPACT")
+                .font(.appFont.headline)
+                .foregroundColor(Color.theme.textSecondary)
+                .textCase(.uppercase)
+                .padding(.horizontal, 8)
             
-            StatCard(
-                title: "Guardian Streak",
-                value: "\(vitalityManager.guardianStreak)",
-                subtitle: "days protected",
-                accentColor: Color.theme.secondary
+            HStack(spacing: 16) {
+                ImpactStatCard(
+                    iconName: "chart.bar.xaxis",
+                    iconColor: Color.theme.primary,
+                    value: "6h 12m",
+                    subtitle: "Screen Time"
+                )
+                
+                ImpactStatCard(
+                    iconName: "bell.badge",
+                    iconColor: Color(hex: "9F7446"), // Bronze warning color
+                    value: "142",
+                    subtitle: "Pickups Today"
+                )
+            }
+            
+            VitalityScoreCard(
+                health: vitalityManager.health,
+                message: vitalityManager.narrativeMessage
             )
         }
     }
@@ -176,27 +178,30 @@ struct PetDashboardView: View {
     // MARK: - Testing Controls
     #if DEBUG
     private var testingControls: some View {
-        VStack(spacing: 12) {
-            Text("Testing Controls")
-                .font(.appFont.caption)
+        VStack(alignment: .leading, spacing: 16) {
+            Text("TESTING CONTROLS")
+                .font(.appFont.headline)
                 .foregroundColor(Color.theme.textSecondary)
+                .textCase(.uppercase)
             
             HStack(spacing: 12) {
-                Button("Damage (-20%)") {
+                Button("-20% Health") {
                     vitalityManager.adjustHealth(by: -0.2)
                     LiveActivityManager.shared.update(health: vitalityManager.health, state: "Distracted")
                 }
                 .buttonStyle(SecondaryButtonStyle())
                 
-                Button("Heal (+20%)") {
+                Button("+20% Health") {
                     vitalityManager.adjustHealth(by: 0.2)
                     LiveActivityManager.shared.update(health: vitalityManager.health, state: "Healing")
                 }
                 .buttonStyle(PrimaryButtonStyle())
             }
+            .frame(maxWidth: .infinity)
         }
-        .padding()
-        .glassCard()
+        .padding(24)
+        .background(Color.white)
+        .cornerRadius(24)
     }
     #endif
     
@@ -227,4 +232,90 @@ struct PetDashboardView: View {
     let container = try! ModelContainer(for: PetEntity.self, configurations: config)
     
     return PetDashboardView(modelContext: container.mainContext)
+}
+
+// MARK: - Extra Components
+struct ImpactStatCard: View {
+    let iconName: String
+    let iconColor: Color
+    let value: String
+    let subtitle: String
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Image(systemName: iconName)
+                .font(.system(size: 24))
+                .foregroundColor(iconColor)
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text(value)
+                    .font(.custom("PlusJakartaSans-Bold", size: 32)) // Adjust size so it fits
+                    .foregroundColor(Color.theme.textPrimary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+                
+                Text(subtitle)
+                    .font(.appFont.caption)
+                    .foregroundColor(Color.theme.textSecondary)
+                    .textCase(.uppercase)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(20)
+        .background(Color.white)
+        .cornerRadius(24)
+    }
+}
+
+struct VitalityScoreCard: View {
+    let health: Double
+    let message: String
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("VITALITY SCORE")
+                .font(.appFont.headline)
+                .foregroundColor(Color.theme.textSecondary)
+                .textCase(.uppercase)
+            
+            HStack {
+                Text("\(Int(health * 100))%")
+                    .font(.custom("PlusJakartaSans-Bold", size: 64))
+                    .foregroundColor(Color.theme.primary)
+                
+                Spacer()
+                
+                Image(systemName: "bolt.heart.fill")
+                    .font(.system(size: 32))
+                    .foregroundColor(Color.theme.primary)
+            }
+            
+            // Progress Bar
+            GeometryReader { geometry in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(Color.theme.textSecondary.opacity(0.15))
+                        .frame(height: 8)
+                    
+                    Capsule()
+                        .fill(Color.theme.primary)
+                        .frame(width: max(0, min(geometry.size.width * CGFloat(health), geometry.size.width)), height: 8)
+                }
+            }
+            .frame(height: 8)
+            .padding(.top, 4)
+            .padding(.bottom, 8)
+            
+            Text(message)
+                .font(.appFont.body)
+                .foregroundColor(Color.theme.textSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(24)
+        .background(Color.white)
+        .cornerRadius(24)
+    }
 }

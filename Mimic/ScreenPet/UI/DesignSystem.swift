@@ -33,18 +33,18 @@ extension Color {
 
 struct ColorTheme {
     // Primary palette
-    let primary = Color(hex: "A8E6CF")      // Mint - healthy, positive
+    let primary = Color(hex: "EB5E55")      // Brand Red/Coral
     let secondary = Color(hex: "DDA0DD")    // Lavender - accent, stats
     let warning = Color(hex: "FFB347")      // Peach - warning states
     let critical = Color(hex: "FF6B6B")     // Coral - critical, alerts
     
     // Background gradient
-    let backgroundStart = Color(hex: "F5E6D3")  // Warm cream
-    let backgroundEnd = Color(hex: "E8D5E3")    // Soft pink
+    let backgroundStart = Color(hex: "F8F9FA")  // Neutral background
+    let backgroundEnd = Color(hex: "F8F9FA")    // Neutral background
     
     // Glass card
-    let cardBackground = Color.white.opacity(0.6)
-    let cardBorder = Color.white.opacity(0.3)
+    let cardBackground = Color.white.opacity(0.8)
+    let cardBorder = Color.white.opacity(0.5)
     
     // Text
     let textPrimary = Color(hex: "2D3436")   // Charcoal
@@ -68,18 +68,19 @@ extension Font {
 }
 
 struct AppFontTheme {
-    let largeTitle = Font.system(size: 32, weight: .bold, design: .rounded)
-    let title = Font.system(size: 24, weight: .semibold, design: .rounded)
-    let headline = Font.system(size: 17, weight: .semibold, design: .default)
-    let body = Font.system(size: 15, weight: .regular, design: .default)
-    let caption = Font.system(size: 12, weight: .regular, design: .default)
+    // For variable fonts, we typically reference the base name and apply the weight modifier
+    let largeTitle = Font.custom("PlusJakartaSans-Regular", size: 32).weight(.bold)
+    let title = Font.custom("PlusJakartaSans-Regular", size: 24).weight(.semibold)
+    let headline = Font.custom("PlusJakartaSans-Regular", size: 17).weight(.semibold)
+    let body = Font.custom("PlusJakartaSans-Regular", size: 15)
+    let caption = Font.custom("PlusJakartaSans-Regular", size: 12)
 }
 
 // MARK: - View Modifiers
 
 /// Glass card effect with blur and subtle border
 struct GlassCardModifier: ViewModifier {
-    var cornerRadius: CGFloat = 24
+    var cornerRadius: CGFloat = 16
     
     func body(content: Content) -> some View {
         content
@@ -112,7 +113,7 @@ struct AppBackgroundModifier: ViewModifier {
 
 extension View {
     /// Apply glassmorphism card styling
-    func glassCard(cornerRadius: CGFloat = 24) -> some View {
+    func glassCard(cornerRadius: CGFloat = 16) -> some View {
         modifier(GlassCardModifier(cornerRadius: cornerRadius))
     }
     
@@ -132,7 +133,7 @@ struct PrimaryButtonStyle: ButtonStyle {
             .padding(.horizontal, 24)
             .padding(.vertical, 12)
             .background(
-                Capsule()
+                RoundedRectangle(cornerRadius: 12)
                     .fill(
                         LinearGradient(
                             colors: [Color.theme.primary, Color.theme.secondary],
@@ -154,7 +155,7 @@ struct SecondaryButtonStyle: ButtonStyle {
             .padding(.horizontal, 24)
             .padding(.vertical, 12)
             .background(
-                Capsule()
+                RoundedRectangle(cornerRadius: 12)
                     .fill(Color.white)
                     .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
             )
@@ -170,10 +171,10 @@ struct IconButtonStyle: ButtonStyle {
             .foregroundColor(Color.theme.textPrimary)
             .frame(width: 48, height: 48)
             .background(
-                Circle()
+                RoundedRectangle(cornerRadius: 12)
                     .fill(.ultraThinMaterial)
                     .overlay(
-                        Circle()
+                        RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.theme.cardBorder, lineWidth: 1)
                     )
             )
@@ -213,9 +214,9 @@ struct StatCard: View {
         }
         .frame(maxWidth: .infinity, minHeight: 100, alignment: .leading)
         .padding(16)
-        .glassCard()
+        .glassCard(cornerRadius: 16)
         .overlay(
-            RoundedRectangle(cornerRadius: 24)
+            RoundedRectangle(cornerRadius: 16)
                 .stroke(accentColor.opacity(0.3), lineWidth: 2)
                 .padding(1)
         )

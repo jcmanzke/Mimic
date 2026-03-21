@@ -97,76 +97,9 @@ The app supports 3 emotional narrative modes. Users can switch via Settings. **D
 
 ---
 
-## 7. Design System
+## 7. Design System & UI/UX Development Rules
 
 > [!IMPORTANT]
-> **All UI/UX changes MUST use this design system.** Do not use hardcoded colors or arbitrary fonts.
+> All design-related documentation, including our design system tokens, colors, typography, and spacing rules, has been moved to `design.md`.
+> Please refer to `design.md` for any UI/UX implementation details.
 
-### A. Color Palette
-
-```swift
-// Usage: Color.theme.primary
-extension Color {
-    static let theme = ColorTheme()
-}
-
-struct ColorTheme {
-    let primary = Color(hex: "A8E6CF")      // Mint - healthy, positive
-    let secondary = Color(hex: "DDA0DD")    // Lavender - accent, stats
-    let warning = Color(hex: "FFB347")      // Peach - warning states
-    let critical = Color(hex: "FF6B6B")     // Coral - critical, alerts
-    
-    let backgroundStart = Color(hex: "F5E6D3")  // Warm cream
-    let backgroundEnd = Color(hex: "E8D5E3")    // Soft pink
-    
-    let cardBackground = Color.white.opacity(0.6)
-    let cardBorder = Color.white.opacity(0.3)
-    
-    let textPrimary = Color(hex: "2D3436")   // Charcoal
-    let textSecondary = Color(hex: "636E72") // Gray
-}
-```
-
-### B. Typography
-
-| Style | Font | Size | Weight | Usage |
-|:---|:---|:---|:---|:---|
-| `largeTitle` | SF Rounded | 32pt | Bold | Screen titles |
-| `title` | SF Rounded | 24pt | Semibold | Section headers |
-| `headline` | SF Pro | 17pt | Semibold | Card titles |
-| `body` | SF Pro | 15pt | Regular | Body text |
-| `caption` | SF Pro | 12pt | Regular | Labels, hints |
-
-### C. Component Tokens
-
-| Component | Specification |
-|:---|:---|
-| **Glass Card** | Corner radius: 24px, Blur: 20px, Border: 1px `cardBorder` |
-| **Primary Button** | Pill, 44px height, gradient fill (`primary` to `secondary`) |
-| **Secondary Button** | Pill, white fill, subtle shadow |
-| **Icon Button** | Circle 48px, glass background |
-| **Stat Card** | 160×100px, glass, colored accent bar |
-| **Tab Bar** | 5 icons, floating glass style |
-
-### D. Modifiers (SwiftUI)
-
-```swift
-.glassCard()           // Apply glass card styling
-.appBackground()       // Apply gradient background
-.primaryButtonStyle()  // Primary button appearance
-```
-
----
-
-## 8. UI/UX Development Rules
-
-> [!CAUTION]
-> These rules are MANDATORY for any UI changes.
-
-1. **Use Design Tokens**: All colors via `Color.theme.*`, all fonts via `Font.appFont.*`
-2. **Glass Morphism**: Cards must use `.glassCard()` modifier
-3. **Consistent Spacing**: Use multiples of 8px (8, 16, 24, 32...)
-4. **Accessibility**: Minimum touch target 44×44px
-5. **Animation**: Use `.spring()` for interactive elements
-6. **Dark Mode**: Not required for MVP; design for light mode only
-7. **Reference File**: [DesignSystem.swift](file:///Users/christianmanzke/Desktop/GitHub/Mimic/Mimic/ScreenPet/UI/DesignSystem.swift)
