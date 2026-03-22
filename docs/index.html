@@ -121,7 +121,7 @@
             </button>
         </div>
     </nav>
-    <main class="pt-20">
+    <main class="pt-10">
         <!-- Hero Section -->
         <section id="hero" class="relative min-h-[921px] flex items-center overflow-hidden px-8">
             <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -297,36 +297,40 @@
                     <!-- Dynamic Island Mockup -->
                     <div
                         class="max-w-sm mx-auto bg-black rounded-[4rem] p-4 shadow-2xl relative overflow-hidden aspect-[9/19] border-[12px] border-[#222]">
-                        <div
-                            class="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-black rounded-full z-20 flex items-center justify-between px-4">
-                            <img alt="Mini Lumi" class="w-5 h-5 rounded-full object-cover"
-                                data-alt="Small avatar of digital pet"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyZkqRceRAzxX5Pc0KtVC1A9DsLF0voZgIRqdXKUuFybS3H8GRsBpeuFd3dY8onKueuAof3jK5PLOPA4U6az7_oUi7NF2TJOPaHXZLAEhb8N2jveBw5cc6GEh7R7mm_aoygZuOTbSXq7OLwe63Nw-uWa8EkEbqupNsEjNBrLxSWYVLcqtKsPsz0md1hHdDAQyzw-Rhq96YkDK148wKcTxJX5lDCMvcJUV1e-t-S--YE26fDfkLd_d2brNzZvYlA-vexQfmaZlciajR" />
-                            <div class="flex gap-1">
-                                <div class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></div>
-                                <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
-                            </div>
+                        <!-- Dynamic Island -->
+                        <div class="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-black rounded-full z-20">
                         </div>
-                        <div class="h-full w-full bg-[#111] pt-20 px-6">
-                            <div class="w-full aspect-square rounded-3xl overflow-hidden mb-6">
-                                <img alt="Lumi in garden" class="w-full h-full object-cover opacity-80"
-                                    data-alt="Digital pet in a lush green garden"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP5bG9gwocmuREvQNgB2nvTTbOa5Hge8iErDwaosunIWzSHh53DIaY04gp8ZFtAYeMb9LSdLefHH7xK7VA59hu4E9Ax4duRqZ7GKXneP4GgFumcfH7pUlMUQfk_DCxr-bkgFbxzhoB8g9-MSPgM7BJMrsjwTZk6lG5-rqTLI3luUPMqpA2nvO1aitSer8R5He1N3IQpq-mJSPp3ihpcZlYt0u9xfxlcYClchjoPHlXSkTgpuszLgITZxeP2PdxMXhubG-Huu7zZ-VF" />
+                        <!-- Onboarding Screen 1: Meet Lumi -->
+                        <div
+                            class="h-full w-full bg-[#F8F9FA] rounded-[3rem] flex flex-col items-center justify-between pt-16 pb-6 px-5 overflow-hidden">
+                            <!-- Top spacer -->
+                            <div class="flex-1"></div>
+                            <!-- Lumi with radial glow -->
+                            <div class="relative flex items-center justify-center mb-2">
+                                <div class="absolute w-72 h-72 rounded-full"
+                                    style="background: radial-gradient(circle, rgba(235,94,85,0.15) 30%, transparent 70%);">
+                                </div>
+                                <img alt="Happy Lumi" class="relative w-48 h-48 object-contain drop-shadow-lg"
+                                    src="https://lh3.googleusercontent.com/aida/ADBb0uiSsbU0oGuDBRLhYy6tUb0DtydWVepfatjS8A9Gm_BHlCz2K5fn5GRfGB1948FhKSlm14TdW_BdVfqzMqKbE-yVkbz_sv9AVxz_BN6ymEziHL5-7XzN2ukXenLNqVg3pgw679So_8CkzwqLAZprTLjBe2-wLXfo13rZTsi7iqvRVooEgL5ylRkUq8KsTzjC7Z-Rzitqb8_CtqvP-eJ3baf1F--wj4J5bGfSgP4gKgDA1zD_1qKAz05lxl4psLWV-oLEAn304kXE9w" />
                             </div>
-                            <div class="space-y-4">
-                                <div class="h-4 w-3/4 bg-white/10 rounded-full"></div>
-                                <div class="h-4 w-1/2 bg-white/5 rounded-full"></div>
-                                <div class="mt-8 p-4 rounded-2xl bg-primary/20 border border-primary/30">
-                                    <div class="flex justify-between items-center mb-2">
-                                        <span class="text-[10px] text-primary-fixed uppercase font-bold">Live
-                                            Focus</span>
-                                        <span class="text-xs text-white">45:00</span>
-                                    </div>
-                                    <div class="h-1 w-full bg-white/10 rounded-full">
-                                        <div class="h-full bg-primary w-2/3 rounded-full"></div>
-                                    </div>
+                            <!-- Text content -->
+                            <div class="text-center mt-4 mb-2 space-y-2">
+                                <h3 class="text-3xl font-bold text-[#2D3436] tracking-tight">Meet Lumi.</h3>
+                                <p class="text-base text-[#636E72] leading-relaxed px-2">Lumi feels everything you feel
+                                    on
+                                    your phone.</p>
+                            </div>
+                            <!-- Spacer -->
+                            <div class="flex-1"></div>
+                            <!-- CTA Button -->
+                            <div class="w-full px-1 mb-1">
+                                <div class="w-full py-3 bg-[#EB5E55] rounded-2xl text-center">
+                                    <span class="text-white font-semibold text-lg">Say hello →</span>
                                 </div>
                             </div>
+                            <!-- Terms footer -->
+                            <p class="text-[9px] text-[#636E72] text-center px-3 leading-tight">By continuing, you agree
+                                to our Terms of Service and Privacy Policy</p>
                         </div>
                     </div>
                     <!-- Decorative Floating Elements -->

@@ -224,7 +224,7 @@ struct DidYouKnowFact: Identifiable {
 @Observable
 class OnboardingManager {
     // Total number of onboarding pages
-    static let totalPages = 15
+    static let totalPages = 12
     
     var currentPage: Int = 0
     

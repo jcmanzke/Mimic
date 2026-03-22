@@ -68,12 +68,22 @@ extension Font {
 }
 
 struct AppFontTheme {
-    // For variable fonts, we typically reference the base name and apply the weight modifier
-    let largeTitle = Font.custom("PlusJakartaSans-Regular", size: 32).weight(.bold)
-    let title = Font.custom("PlusJakartaSans-Regular", size: 24).weight(.semibold)
-    let headline = Font.custom("PlusJakartaSans-Regular", size: 17).weight(.semibold)
+    // Display — hero/feature numbers (vitality score)
+    let display = Font.custom("PlusJakartaSans-Regular", size: 40).weight(.bold)
+    // Large Title — page-level headings (pet name)
+    let largeTitle = Font.custom("PlusJakartaSans-Regular", size: 28).weight(.bold)
+    // Title — card-level large values (stat cards)
+    let title = Font.custom("PlusJakartaSans-Regular", size: 22).weight(.bold)
+    // Headline — section headers, button labels
+    let headline = Font.custom("PlusJakartaSans-Regular", size: 15).weight(.semibold)
+    // Subheadline — secondary labels, small buttons
+    let subheadline = Font.custom("PlusJakartaSans-Regular", size: 13).weight(.semibold)
+    // Body — primary readable text
     let body = Font.custom("PlusJakartaSans-Regular", size: 15)
+    // Caption — timestamps, subtitles, metadata
     let caption = Font.custom("PlusJakartaSans-Regular", size: 12)
+    // Overline — section group labels (e.g. "SELECTED APPS")
+    let overline = Font.custom("PlusJakartaSans-Regular", size: 11).weight(.semibold)
 }
 
 // MARK: - View Modifiers

@@ -1,26 +1,25 @@
 import SwiftUI
 
-struct OnboardingWelcomeView: View {
-    let page: OnboardingStoryPage
+// MARK: - Welcome Container (handles all 4 story sub-pages internally)
+
+struct OnboardingWelcomeContainerView: View {
     let isFirstScreen: Bool
     let onContinue: () -> Void
     
-    @State private var animateIn = false
+    @State private var subPage = 0
+    
+    private var page: OnboardingStoryPage { OnboardingStoryPage.pages[subPage] }
     
     var body: some View {
         VStack(spacing: 0) {
             Spacer()
             
-            // Pet image
+            // Lumi section — stays in place, only cross-fades if pet asset changes
             ZStack {
-                // Soft glow behind pet
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [
-                                Color.theme.primary.opacity(0.15),
-                                Color.clear
-                            ],
+                            colors: [Color.theme.primary.opacity(0.15), Color.clear],
                             center: .center,
                             startRadius: 40,
                             endRadius: 130
@@ -33,66 +32,68 @@ struct OnboardingWelcomeView: View {
                     .scaledToFit()
                     .frame(width: 180, height: 180)
                     .shadow(color: Color.theme.primary.opacity(0.3), radius: 20)
-                    .scaleEffect(animateIn ? 1.0 : 0.8)
-                    .opacity(animateIn ? 1 : 0)
+                    .animation(.spring(response: 0.5, dampingFraction: 0.7), value: page.petAsset)
                 
-                // Notification badges for the science/reframe screen
                 if page.showNotificationBadges {
                     notificationBadges
+                        .transition(.opacity)
                 }
             }
             
             Spacer().frame(height: 32)
             
-            // Headline
-            Text(page.headline)
-                .font(.appFont.largeTitle)
-                .foregroundColor(Color.theme.textPrimary)
-                .multilineTextAlignment(.center)
-                .opacity(animateIn ? 1 : 0)
-                .offset(y: animateIn ? 0 : 20)
-            
-            Spacer().frame(height: 12)
-            
-            // Body
-            Text(page.body)
-                .font(.appFont.body)
-                .foregroundColor(Color.theme.textSecondary)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 16)
-                .opacity(animateIn ? 1 : 0)
-                .offset(y: animateIn ? 0 : 20)
+            // Text section — slides in from the right on each sub-page change
+            VStack(spacing: 12) {
+                Text(page.headline)
+                    .font(.appFont.largeTitle)
+                    .foregroundColor(Color.theme.textPrimary)
+                    .multilineTextAlignment(.center)
+                
+                Text(page.body)
+                    .font(.appFont.body)
+                    .foregroundColor(Color.theme.textSecondary)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 16)
+            }
+            .id(subPage) // new ID forces SwiftUI to apply the transition
+            .transition(.asymmetric(
+                insertion: .move(edge: .trailing).combined(with: .opacity),
+                removal: .move(edge: .leading).combined(with: .opacity)
+            ))
             
             Spacer()
             
             // CTA
             OnboardingCTAButton(page.ctaText) {
-                onContinue()
+                advanceSubPage()
             }
             .padding(.horizontal, 24)
-            .padding(.bottom, isFirstScreen ? 8 : 40)
+            .padding(.bottom, isFirstScreen && subPage == 0 ? 8 : 40)
             
-            // Terms footer on first screen only
-            if isFirstScreen {
+            // Terms footer — only on landing (sub-page 0)
+            if subPage == 0 {
                 Text("By continuing, you agree to our Terms of Service and Privacy Policy")
                     .font(.appFont.caption)
                     .foregroundColor(Color.theme.textSecondary)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 32)
                     .padding(.bottom, 24)
+                    .transition(.opacity)
             }
-        }
-        .onAppear {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.7).delay(0.1)) {
-                animateIn = true
-            }
-        }
-        .onDisappear {
-            animateIn = false
         }
     }
     
-    // MARK: - Notification Badges (Screen 4)
+    private func advanceSubPage() {
+        if subPage < OnboardingStoryPage.pages.count - 1 {
+            withAnimation(.easeInOut(duration: 0.35)) {
+                subPage += 1
+            }
+        } else {
+            onContinue()
+        }
+    }
+    
+    // MARK: - Notification Badges (shown on sub-page 3)
     
     private var notificationBadges: some View {
         Group {
@@ -112,15 +113,10 @@ struct OnboardingWelcomeView: View {
                 .offset(x: 80, y: 70)
                 .rotationEffect(.degrees(-4))
         }
-        .opacity(animateIn ? 1 : 0)
     }
 }
 
 #Preview {
-    OnboardingWelcomeView(
-        page: OnboardingStoryPage.pages[0],
-        isFirstScreen: true,
-        onContinue: {}
-    )
-    .appBackground()
+    OnboardingWelcomeContainerView(isFirstScreen: true, onContinue: {})
+        .appBackground()
 }

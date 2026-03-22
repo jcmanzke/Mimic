@@ -6,9 +6,9 @@ struct OnboardingContainerView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            // Progress bar + back button (hidden on first and processing/final screens)
-            if shouldShowProgressBar {
-                HStack(spacing: 12) {
+            // Top navigation row
+            HStack(spacing: 12) {
+                if shouldShowProgressBar {
                     if manager.currentPage > 0 {
                         Button {
                             withAnimation(.easeInOut(duration: 0.3)) {
@@ -23,31 +23,47 @@ struct OnboardingContainerView: View {
                     }
                     
                     OnboardingProgressBar(progress: manager.progress)
+                } else {
+                    Spacer()
                 }
-                .padding(.horizontal, 24)
-                .padding(.top, 8)
-                .padding(.bottom, 4)
+                
+                #if DEBUG
+                if manager.currentPage == 0 {
+                    Button("Skip →") {
+                        onComplete()
+                    }
+                    .font(.appFont.caption)
+                    .foregroundColor(Color.theme.textSecondary)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 6)
+                    .background(
+                        Capsule()
+                            .fill(Color.theme.textSecondary.opacity(0.1))
+                    )
+                }
+                #endif
             }
+            .padding(.horizontal, 24)
+            .padding(.top, 8)
+            .padding(.bottom, 4)
             
             // Page content
             TabView(selection: $manager.currentPage) {
-                // Screens 1-4: Welcome / Story
-                ForEach(0..<4, id: \.self) { index in
-                    OnboardingWelcomeView(
-                        page: OnboardingStoryPage.pages[index],
-                        isFirstScreen: index == 0,
-                        onContinue: { withAnimation(.easeInOut(duration: 0.3)) { manager.advance() } }
-                    )
-                    .tag(index)
-                }
                 
-                // Screen 5: Personalization Intro
+                // Tag 0: Welcome story (4 sub-pages handled internally — Lumi stays, text slides)
+                OnboardingWelcomeContainerView(
+                    isFirstScreen: true,
+                    onContinue: { withAnimation(.easeInOut(duration: 0.3)) { manager.advance() } }
+                )
+                .tag(0)
+                
+                // Tag 1: Personalization Intro
                 OnboardingPersonalizationIntroView(
                     onContinue: { withAnimation(.easeInOut(duration: 0.3)) { manager.advance() } }
                 )
-                .tag(4)
+                .tag(1)
                 
-                // Screen 6: Survey Q1 - Motivation
+                // Tag 2: Survey Q1 - Motivation
                 OnboardingSurveyView(
                     headline: "Why do you want to change?",
                     options: OnboardingMotivation.allCases.map { ($0.emoji, $0.rawValue, $0.id) },
@@ -57,9 +73,9 @@ struct OnboardingContainerView: View {
                     ),
                     onContinue: { withAnimation(.easeInOut(duration: 0.3)) { manager.advance() } }
                 )
-                .tag(5)
+                .tag(2)
                 
-                // Screen 7: Survey Q2 - Pain Point
+                // Tag 3: Survey Q2 - Pain Point
                 OnboardingSurveyView(
                     headline: "How does your phone use affect you most?",
                     options: OnboardingPainPoint.allCases.map { ($0.emoji, $0.rawValue, $0.id) },
@@ -69,9 +85,9 @@ struct OnboardingContainerView: View {
                     ),
                     onContinue: { withAnimation(.easeInOut(duration: 0.3)) { manager.advance() } }
                 )
-                .tag(6)
+                .tag(3)
                 
-                // Screen 8: Survey Q3 - Habit Window
+                // Tag 4: Survey Q3 - Habit Window
                 OnboardingSurveyView(
                     headline: "When do you reach for your phone the most?",
                     options: OnboardingHabitWindow.allCases.map { ($0.emoji, $0.rawValue, $0.id) },
@@ -81,9 +97,9 @@ struct OnboardingContainerView: View {
                     ),
                     onContinue: { withAnimation(.easeInOut(duration: 0.3)) { manager.advance() } }
                 )
-                .tag(7)
+                .tag(4)
                 
-                // Screen 9: Survey Q4 - Identity
+                // Tag 5: Survey Q4 - Identity
                 OnboardingSurveyView(
                     headline: "What describes you best?",
                     options: OnboardingIdentity.allCases.map { ($0.emoji, $0.rawValue, $0.id) },
@@ -93,15 +109,15 @@ struct OnboardingContainerView: View {
                     ),
                     onContinue: { withAnimation(.easeInOut(duration: 0.3)) { manager.advance() } }
                 )
-                .tag(8)
+                .tag(5)
                 
-                // Screen 10: Did You Know?
+                // Tag 6: Did You Know?
                 OnboardingDidYouKnowView(
                     onContinue: { withAnimation(.easeInOut(duration: 0.3)) { manager.advance() } }
                 )
-                .tag(9)
+                .tag(6)
                 
-                // Screen 11: Survey Q5 - Age
+                // Tag 7: Survey Q5 - Age
                 OnboardingSurveyView(
                     headline: "How old are you?",
                     options: OnboardingAgeRange.allCases.map { (nil, $0.rawValue, $0.id) },
@@ -111,55 +127,51 @@ struct OnboardingContainerView: View {
                     ),
                     onContinue: { withAnimation(.easeInOut(duration: 0.3)) { manager.advance() } }
                 )
-                .tag(10)
+                .tag(7)
                 
-                // Screen 12: Survey Q6 - Screen Time Slider
+                // Tag 8: Survey Q6 - Screen Time Slider
                 OnboardingSliderView(
                     screenTimeHours: $manager.screenTimeHours,
                     onContinue: { withAnimation(.easeInOut(duration: 0.3)) { manager.advance() } }
                 )
-                .tag(11)
+                .tag(8)
                 
-                // Screens 13-14: Processing Animation
+                // Tag 9: Processing Animation (auto-advances)
                 OnboardingProcessingView(
                     onComplete: { withAnimation(.easeInOut(duration: 0.3)) { manager.advance() } }
                 )
-                .tag(12)
+                .tag(9)
                 
-                // Screen 15: Empathy Profile
+                // Tag 10: Empathy Profile
                 OnboardingProfileView(
                     profile: manager.empathyProfile,
                     screenTimeHours: manager.screenTimeHours,
                     onContinue: { withAnimation(.easeInOut(duration: 0.3)) { manager.advance() } }
                 )
-                .tag(13)
+                .tag(10)
                 
-                // Screen 20: Final CTA (Screen 14 here since we skip 16-19)
+                // Tag 11: Final CTA
                 OnboardingFinalView(
                     onSetup: {
                         manager.completeOnboarding()
                         onComplete()
                     }
                 )
-                .tag(14)
-                
-                // Placeholder for page count (to get 15 pages = index 0-14, plus tag 15 for totalPages=16)
-                // The actual total is 15 screens (0-14), so we adjust totalPages
+                .tag(11)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .animation(.easeInOut(duration: 0.3), value: manager.currentPage)
             .ignoresSafeArea(.keyboard)
         }
         .appBackground()
     }
     
     private var shouldShowProgressBar: Bool {
-        // Hide on first screen (landing), processing screen, and final screen
-        manager.currentPage > 0 && manager.currentPage != 12 && manager.currentPage != 14
+        // Hide on welcome (page 0), processing (page 9), and final (page 11)
+        manager.currentPage > 0 && manager.currentPage != 9 && manager.currentPage != 11
     }
 }
 
-// MARK: - Personalization Intro (Screen 5)
+// MARK: - Personalization Intro (Tag 1)
 
 struct OnboardingPersonalizationIntroView: View {
     let onContinue: () -> Void

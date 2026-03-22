@@ -5,6 +5,7 @@ struct PetDashboardView: View {
     @State private var vitalityManager: VitalityManager
     @State private var showingSettings = false
     @State private var wobbleAmount: Double = 0 // Track the current tilt
+    @State private var appUsageManager = AppUsageManager()
     
     init(modelContext: ModelContext) {
         let vm = VitalityManager(modelContext: modelContext)
@@ -24,9 +25,13 @@ struct PetDashboardView: View {
                     // Impact & Vitality Stats
                     impactSection
                     
+                    // App Selection Table
+                    AppSelectionTableView(manager: appUsageManager)
+                    
                     // Testing Controls (Remove in production)
                     #if DEBUG
                     testingControls
+                    replayOnboardingButton
                     #endif
                     
                     Spacer(minLength: 40)
@@ -147,9 +152,10 @@ struct PetDashboardView: View {
     private var impactSection: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("CURRENT IMPACT")
-                .font(.appFont.headline)
+                .font(.appFont.overline)
                 .foregroundColor(Color.theme.textSecondary)
                 .textCase(.uppercase)
+                .tracking(0.8)
                 .padding(.horizontal, 8)
             
             HStack(spacing: 16) {
@@ -180,9 +186,10 @@ struct PetDashboardView: View {
     private var testingControls: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("TESTING CONTROLS")
-                .font(.appFont.headline)
+                .font(.appFont.overline)
                 .foregroundColor(Color.theme.textSecondary)
                 .textCase(.uppercase)
+                .tracking(0.8)
             
             HStack(spacing: 12) {
                 Button("-20% Health") {
@@ -202,6 +209,27 @@ struct PetDashboardView: View {
         .padding(24)
         .background(Color.white)
         .cornerRadius(24)
+    }
+    
+    private var replayOnboardingButton: some View {
+        Button {
+            UserDefaults.standard.removeObject(forKey: "hasCompletedOnboarding")
+        } label: {
+            HStack(spacing: 6) {
+                Image(systemName: "arrow.counterclockwise")
+                    .font(.appFont.subheadline)
+                Text("Replay Onboarding")
+                    .font(.appFont.caption)
+            }
+            .foregroundColor(Color.theme.textSecondary)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 8)
+            .background(
+                Capsule()
+                    .fill(Color.theme.textSecondary.opacity(0.08))
+            )
+        }
+        .frame(maxWidth: .infinity)
     }
     #endif
     
@@ -244,12 +272,12 @@ struct ImpactStatCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             Image(systemName: iconName)
-                .font(.system(size: 24))
+                .font(.system(size: 20))
                 .foregroundColor(iconColor)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(value)
-                    .font(.custom("PlusJakartaSans-Bold", size: 32)) // Adjust size so it fits
+                    .font(.appFont.title)
                     .foregroundColor(Color.theme.textPrimary)
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
@@ -276,19 +304,20 @@ struct VitalityScoreCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("VITALITY SCORE")
-                .font(.appFont.headline)
+                .font(.appFont.overline)
                 .foregroundColor(Color.theme.textSecondary)
                 .textCase(.uppercase)
+                .tracking(0.8)
             
             HStack {
                 Text("\(Int(health * 100))%")
-                    .font(.custom("PlusJakartaSans-Bold", size: 64))
+                    .font(.appFont.display)
                     .foregroundColor(Color.theme.primary)
                 
                 Spacer()
                 
                 Image(systemName: "bolt.heart.fill")
-                    .font(.system(size: 32))
+                    .font(.system(size: 24))
                     .foregroundColor(Color.theme.primary)
             }
             
