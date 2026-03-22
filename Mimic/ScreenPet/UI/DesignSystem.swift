@@ -183,6 +183,178 @@ struct IconButtonStyle: ButtonStyle {
     }
 }
 
+// MARK: - Onboarding Components
+
+/// Full-width salmon CTA button for onboarding
+struct OnboardingCTAButton: View {
+    let title: String
+    let isEnabled: Bool
+    let action: () -> Void
+    
+    init(_ title: String, isEnabled: Bool = true, action: @escaping () -> Void) {
+        self.title = title
+        self.isEnabled = isEnabled
+        self.action = action
+    }
+    
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+                .font(.appFont.headline)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 16)
+                .background(
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(isEnabled ? Color.theme.primary : Color.theme.textSecondary.opacity(0.3))
+                )
+        }
+        .disabled(!isEnabled)
+        .animation(.easeInOut(duration: 0.2), value: isEnabled)
+    }
+}
+
+/// Thin salmon progress bar for onboarding
+struct OnboardingProgressBar: View {
+    let progress: Double
+    
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                Capsule()
+                    .fill(Color.theme.textSecondary.opacity(0.12))
+                    .frame(height: 4)
+                
+                Capsule()
+                    .fill(Color.theme.primary)
+                    .frame(width: max(0, geometry.size.width * CGFloat(progress)), height: 4)
+                    .animation(.spring(response: 0.4), value: progress)
+            }
+        }
+        .frame(height: 4)
+    }
+}
+
+/// Selectable option card for survey screens
+struct OnboardingOptionCard: View {
+    let emoji: String?
+    let label: String
+    let isSelected: Bool
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 12) {
+                if let emoji = emoji {
+                    Text(emoji)
+                        .font(.system(size: 22))
+                }
+                
+                Text(label)
+                    .font(.appFont.body)
+                    .foregroundColor(Color.theme.textPrimary)
+                
+                Spacer()
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 14)
+            .background(
+                RoundedRectangle(cornerRadius: 14)
+                    .fill(isSelected ? Color.theme.primary.opacity(0.1) : Color.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 14)
+                            .stroke(isSelected ? Color.theme.primary : Color.theme.textSecondary.opacity(0.15), lineWidth: isSelected ? 2 : 1)
+                    )
+            )
+        }
+        .animation(.easeInOut(duration: 0.15), value: isSelected)
+    }
+}
+
+/// Notification-style pill badge for the science/reframe screen
+struct NotificationBadge: View {
+    let text: String
+    let dotColor: Color
+    
+    var body: some View {
+        HStack(spacing: 6) {
+            Circle()
+                .fill(dotColor)
+                .frame(width: 8, height: 8)
+            
+            Text(text)
+                .font(.appFont.caption)
+                .foregroundColor(Color.theme.textPrimary)
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 8)
+        .background(
+            Capsule()
+                .fill(Color.white)
+                .shadow(color: .black.opacity(0.08), radius: 4, x: 0, y: 2)
+        )
+    }
+}
+
+/// Info card for "Did You Know" screen
+struct DidYouKnowCard: View {
+    let emoji: String
+    let text: String
+    
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            Text(emoji)
+                .font(.system(size: 24))
+            
+            Text(text)
+                .font(.appFont.body)
+                .foregroundColor(Color.theme.textPrimary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 14)
+                .fill(Color.white)
+                .shadow(color: .black.opacity(0.05), radius: 6, x: 0, y: 2)
+        )
+    }
+}
+
+/// Gauge bar for profile results
+struct OnboardingGaugeBar: View {
+    let label: String
+    let value: Double  // 0.0 to 1.0
+    let trailingLabel: String
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Text(label)
+                    .font(.appFont.caption)
+                    .foregroundColor(Color.theme.textSecondary)
+                Spacer()
+                Text(trailingLabel)
+                    .font(.appFont.caption)
+                    .foregroundColor(Color.theme.primary)
+            }
+            
+            GeometryReader { geometry in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(Color.theme.textSecondary.opacity(0.12))
+                        .frame(height: 8)
+                    
+                    Capsule()
+                        .fill(Color.theme.primary)
+                        .frame(width: max(0, geometry.size.width * CGFloat(value)), height: 8)
+                }
+            }
+            .frame(height: 8)
+        }
+    }
+}
+
 // MARK: - Reusable Components
 
 /// Stat card with accent color

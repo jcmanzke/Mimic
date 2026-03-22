@@ -3,6 +3,8 @@ import SwiftData
 
 @main
 struct MimicApp: App {
+    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
+    
     // 1. Create the container for saving Pet Data
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
@@ -19,8 +21,15 @@ struct MimicApp: App {
 
     var body: some Scene {
         WindowGroup {
-            // 2. Launch the PetDashboardView instead of ContentView
-            PetDashboardView(modelContext: sharedModelContainer.mainContext)
+            if hasCompletedOnboarding {
+                PetDashboardView(modelContext: sharedModelContainer.mainContext)
+            } else {
+                OnboardingContainerView {
+                    withAnimation(.easeInOut(duration: 0.5)) {
+                        hasCompletedOnboarding = true
+                    }
+                }
+            }
         }
         .modelContainer(sharedModelContainer)
     }
