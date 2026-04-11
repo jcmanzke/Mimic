@@ -1,11 +1,17 @@
 import SwiftUI
 import SwiftData
+import DeviceActivity
 
 struct PetDashboardView: View {
     @State private var vitalityManager: VitalityManager
     @State private var showingSettings = false
     @State private var wobbleAmount: Double = 0 // Track the current tilt
     @State private var appUsageManager = AppUsageManager()
+    @State private var filter = DeviceActivityFilter(
+        segment: .daily(
+            during: Calendar.current.dateInterval(of: .day, for: .now)!
+        )
+    )
     
     init(modelContext: ModelContext) {
         let vm = VitalityManager(modelContext: modelContext)
@@ -158,21 +164,9 @@ struct PetDashboardView: View {
                 .tracking(0.8)
                 .padding(.horizontal, 8)
             
-            HStack(spacing: 16) {
-                ImpactStatCard(
-                    iconName: "chart.bar.xaxis",
-                    iconColor: Color.theme.primary,
-                    value: "6h 12m",
-                    subtitle: "Screen Time"
-                )
-                
-                ImpactStatCard(
-                    iconName: "bell.badge",
-                    iconColor: Color(hex: "9F7446"), // Bronze warning color
-                    value: "142",
-                    subtitle: "Pickups Today"
-                )
-            }
+            // The actual sandboxed view loaded securely out-of-process via Extension
+            DeviceActivityReport(.totalActivity, filter: filter)
+                .frame(height: 120) // Provide a fixed height to prevent collapsing during data load
             
             VitalityScoreCard(
                 health: vitalityManager.health,

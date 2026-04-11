@@ -24,9 +24,6 @@ struct SettingsView: View {
                         // Current Mode Description
                         modeDescriptionCard
                         
-                        // Activity Selection
-                        activitySection
-                        
                         // About Section
                         aboutSection
                         
@@ -91,35 +88,6 @@ struct SettingsView: View {
             Text(selectedMode.description)
                 .font(.appFont.body)
                 .foregroundColor(Color.theme.textSecondary)
-        }
-        .padding(16)
-        .glassCard()
-    }
-    
-    // MARK: - Activity Selection
-    private var activitySection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("Screen Time Monitoring")
-                .font(.appFont.headline)
-                .foregroundColor(Color.theme.textPrimary)
-            
-            NavigationLink {
-                ActivitySelectionView()
-            } label: {
-                HStack {
-                    Image(systemName: "apps.iphone")
-                        .foregroundColor(Color.theme.secondary)
-                    
-                    Text("Select Apps to Monitor")
-                        .font(.appFont.body)
-                        .foregroundColor(Color.theme.textPrimary)
-                    
-                    Spacer()
-                    
-                    Image(systemName: "chevron.right")
-                        .foregroundColor(Color.theme.textSecondary)
-                }
-            }
         }
         .padding(16)
         .glassCard()

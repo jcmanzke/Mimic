@@ -13,14 +13,16 @@ class VitalityManager {
     // Pet mode (persisted in UserDefaults)
     var currentMode: PetMode {
         get {
-            if let raw = UserDefaults.standard.string(forKey: "petMode"),
+            let defaults = UserDefaults(suiteName: "group.com.christianmanzke.Mimic") ?? UserDefaults.standard
+            if let raw = defaults.string(forKey: "petMode"),
                let mode = PetMode(rawValue: raw) {
                 return mode
             }
             return .guardian // Default
         }
         set {
-            UserDefaults.standard.set(newValue.rawValue, forKey: "petMode")
+            let defaults = UserDefaults(suiteName: "group.com.christianmanzke.Mimic") ?? UserDefaults.standard
+            defaults.set(newValue.rawValue, forKey: "petMode")
         }
     }
     
@@ -124,7 +126,7 @@ class VitalityManager {
     func checkDailyReset() {
         let now = Date()
         let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: now)
+        let _ = calendar.component(.hour, from: now)
         
         // If it's past 4 AM and the current pet's date is before today 4 AM...
         // This logic is tricky with just "Date". Ideally we store "DayID" or something.

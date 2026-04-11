@@ -2,19 +2,17 @@
 //  DeviceActivityReportExtension.swift
 //  DeviceActivityReportExtension
 //
-//  Created by Christian Manzke on 4/11/26.
-//
 
 import DeviceActivity
 import ExtensionKit
 import SwiftUI
 
 @main
-struct DeviceActivityReportExtension: DeviceActivityReportExtension {
+struct MimicDeviceActivityReport: DeviceActivityReportExtension {
     var body: some DeviceActivityReportScene {
         // Create a report for each DeviceActivityReport.Context that your app supports.
-        TotalActivityReport { totalActivity in
-            TotalActivityView(totalActivity: totalActivity)
+        TotalActivityReport { durationText, pickups in
+            TotalActivityView(totalDurationString: durationText, totalPickups: pickups)
         }
         // Add more reports here...
     }

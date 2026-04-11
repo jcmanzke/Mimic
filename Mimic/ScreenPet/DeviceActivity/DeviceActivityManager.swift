@@ -10,17 +10,34 @@ class DeviceActivityManager: ObservableObject {
     
     private let center = AuthorizationCenter.shared
     
+    /// Maximum minutes to track per day (24 thresholds × 5 min = 120 min)
+    private let maxTrackedMinutes = 120
+    
+    /// Interval between thresholds in minutes
+    private let thresholdIntervalMinutes = 5
+    
     func requestAuthorization() {
         Task {
             do {
                 try await center.requestAuthorization(for: .individual)
-                print("Authorization successful")
+                print("[DeviceActivityManager] Authorization successful")
             } catch {
-                print("Authorization failed: \(error)")
+                print("[DeviceActivityManager] Authorization failed: \(error)")
             }
         }
     }
     
+    /// Start monitoring with multiple thresholds for continuous health decay.
+    ///
+    /// Apple's DeviceActivityEvent fires ONCE when usage reaches a threshold.
+    /// To get periodic callbacks, we register multiple events:
+    /// - HealthDecay_5   → fires at 5 min cumulative usage
+    /// - HealthDecay_10  → fires at 10 min
+    /// - HealthDecay_15  → fires at 15 min
+    /// - ... up to HealthDecay_120 (2 hours)
+    ///
+    /// Each event triggers `eventDidReachThreshold` in the extension,
+    /// which deducts 5 minutes of health decay.
     func startMonitoring() {
         let schedule = DeviceActivitySchedule(
             intervalStart: DateComponents(hour: 0, minute: 0),
@@ -28,44 +45,37 @@ class DeviceActivityManager: ObservableObject {
             repeats: true
         )
         
-        let event = DeviceActivityEvent(
-            applications: activitySelection.applicationTokens,
-            categories: activitySelection.categoryTokens,
-            webDomains: activitySelection.webDomainTokens,
-            threshold: DateComponents(minute: 5) // Trigger every 5 minutes?
-        )
+        // Build events dictionary with thresholds every 5 minutes
+        var events: [DeviceActivityEvent.Name: DeviceActivityEvent] = [:]
         
-        // Note: 'threshold' in DeviceActivityEvent is for "Time Limit" type monitoring.
-        // For "Usage Tracking" to deduct health periodically, we might need a different approach
-        // or rely on the `intervalDidEnd` or `eventDidReachThreshold`.
-        // If we want to deduct 1% per minute, we ideally want callbacks every minute.
-        // However, DeviceActivityMonitor doesn't give minute-by-minute callbacks easily for simple usage.
-        // Strategy: Set a threshold for 1 minute? Then 2? This is hard.
-        // Alternative: The Monitor Extension checks context when the device is used.
+        for minutes in stride(from: thresholdIntervalMinutes, through: maxTrackedMinutes, by: thresholdIntervalMinutes) {
+            let eventName = DeviceActivityEvent.Name("HealthDecay_\(minutes)")
+            let event = DeviceActivityEvent(
+                applications: activitySelection.applicationTokens,
+                categories: activitySelection.categoryTokens,
+                webDomains: activitySelection.webDomainTokens,
+                threshold: DateComponents(minute: minutes)
+            )
+            events[eventName] = event
+        }
         
-        // For this MVP: 
-        // We will set a threshold of 5 minutes. When it triggers, we deduct.
-        // Then we might need to reschedule or use multiple thresholds?
-        // Actually, Apple's API isn't great for "continuous polling".
-        // Better approach for Game Health:
-        // Use `intervalDidStart` and check historical usage? No, that's not real time.
-        
-        // Accepted simplified approach:
-        // Monitor specific categories.
-        // Use `.threshold(DateComponents(minute: 5))` to trigger a specific event.
-        
-        let center = DeviceActivityCenter()
+        let activityCenter = DeviceActivityCenter()
         do {
-            try center.startMonitoring(
+            try activityCenter.startMonitoring(
                 DeviceActivityName("ScreenPetMonitor"),
                 during: schedule,
-                events: [
-                    DeviceActivityEvent.Name("HealthDecay"): event
-                ]
+                events: events
             )
-            print("Monitoring started")
+            print("[DeviceActivityManager] Monitoring started with \(events.count) thresholds (every \(thresholdIntervalMinutes) min, up to \(maxTrackedMinutes) min)")
         } catch {
-            print("Monitoring failed: \(error)")
+            print("[DeviceActivityManager] Monitoring failed: \(error)")
         }
+    }
+    
+    /// Stop all monitoring
+    func stopMonitoring() {
+        let activityCenter = DeviceActivityCenter()
+        activityCenter.stopMonitoring([DeviceActivityName("ScreenPetMonitor")])
+        print("[DeviceActivityManager] Monitoring stopped")
     }
 }

@@ -39,6 +39,19 @@
 - **Dynamic Island (Expanded)**: Shows the animated pet and a "Time Remaining" countdown before the next health drop.
 - **Constraints**: Must update via push notifications or background tasks to stay within the 12-hour Live Activity limit.
 
+### D. Notification Manager (The Voice)
+- Centralized notification service in `Mimic/ScreenPet/Notifications/NotificationManager.swift`.
+- **5 Notification Types**:
+    - **Health Threshold**: Fires when health crosses 75%, 50%, 25%, 10%.
+    - **Critical Alert**: Fires when health reaches 0%.
+    - **Recovery Celebration**: Fires when phone is locked for 10+ minutes.
+    - **Daily Summary**: Scheduled at 9 PM every day.
+    - **Morning Encouragement**: Scheduled at 8 AM every day.
+- **Actionable Categories**: "Start Rescue 🛡️" and "I know" buttons on health notifications.
+- **Cooldown**: 15-minute minimum between threshold notifications.
+- **Deduplication**: Each threshold fires only once per pet day (resets at 4 AM).
+- **Narrative Copy**: All notification text comes from `GuardianNarrative` (mode-aware).
+
 ## 4. Pet States & Visuals
 
 ### A. States (Health Driven)
@@ -89,7 +102,7 @@ The app supports 3 emotional narrative modes. Users can switch via Settings. **D
 - **Narrative**: User is protector; phone is habitat
 - **Sanctuary Stages**: 3 levels (Barren → Growing → Paradise)
 - **Rescue Missions**: Simple "Put your phone down" prompt
-- **Notifications**: At health thresholds (75%, 50%, 25%)
+- **Notifications**: At health thresholds (75%, 50%, 25%, 10%) + critical (0%) + daily summary (9PM) + morning (8AM)
 
 ### Implementation
 - `PetMode` enum in `PetMode.swift`
@@ -113,6 +126,7 @@ This repository contains more than just the iOS app. Below is an overview of all
 | Folder / File | Description |
 |:---|:---|
 | `Mimic/` | Main iOS app source code (SwiftUI, Swift 6) |
+| `Mimic/ScreenPet/Notifications/` | **NotificationManager** — centralized notification service |
 | `PetWidgetExtension/` | Home screen & lock screen widget target |
 | `DeviceActivityMonitorExtension/` | Screen time monitoring extension |
 | `docs/` | **Landing page** hosted via GitHub Pages at `www.life-strategizer.com` |

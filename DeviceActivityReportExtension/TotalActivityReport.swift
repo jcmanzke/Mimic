@@ -2,8 +2,6 @@
 //  TotalActivityReport.swift
 //  DeviceActivityReportExtension
 //
-//  Created by Christian Manzke on 4/11/26.
-//
 
 import DeviceActivity
 import ExtensionKit
@@ -21,19 +19,29 @@ struct TotalActivityReport: DeviceActivityReportScene {
     let context: DeviceActivityReport.Context = .totalActivity
     
     // Define the custom configuration and the resulting view for this report.
-    let content: (String) -> TotalActivityView
+    // It returns a tuple of (durationString, pickupCount)
+    let content: (String, Int) -> TotalActivityView
     
-    func makeConfiguration(representing data: DeviceActivityResults<DeviceActivityData>) async -> String {
+    nonisolated func makeConfiguration(representing data: DeviceActivityResults<DeviceActivityData>) async -> (String, Int) {
         // Reformat the data into a configuration that can be used to create
         // the report's view.
         let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.day, .hour, .minute, .second]
+        formatter.allowedUnits = [.hour, .minute]
         formatter.unitsStyle = .abbreviated
         formatter.zeroFormattingBehavior = .dropAll
         
-        let totalActivityDuration = await data.flatMap { $0.activitySegments }.reduce(0, {
-            $0 + $1.totalActivityDuration
-        })
-        return formatter.string(from: totalActivityDuration) ?? "No activity data"
+        var totalDuration: TimeInterval = 0
+        var totalPickups = 0
+        
+        for await activityData in data {
+            for await segment in activityData.activitySegments {
+                totalDuration += segment.totalActivityDuration
+                totalPickups += segment.totalPickups
+            }
+        }
+        
+        let durationString = formatter.string(from: totalDuration) ?? "0m"
+        
+        return (durationString, totalPickups)
     }
 }

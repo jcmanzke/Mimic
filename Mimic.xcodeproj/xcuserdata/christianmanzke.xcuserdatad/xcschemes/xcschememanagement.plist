@@ -7,6 +7,11 @@
 		<key>DeviceActivityMonitorExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>DeviceActivityReportExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
 		<key>Mimic.xcscheme_^#shared#^_</key>
@@ -17,7 +22,25 @@
 		<key>PetWidgetExtensionExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>29B574222F37510500BBD9B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>29B5746A2F377CFC00BBD9B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>29B5747F2F3781E500BBD9B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
