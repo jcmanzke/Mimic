@@ -16,27 +16,55 @@ struct TotalActivityView: View {
     let textSecondary = Color(red: 99/255, green: 110/255, blue: 114/255) // #636E72
     let warningBronze = Color(red: 159/255, green: 116/255, blue: 70/255) // #9F7446
     
+    /// Whether there's actual usage data to display
+    private var hasData: Bool {
+        totalDurationString != "0m" || totalPickups > 0
+    }
+    
     var body: some View {
-        HStack(spacing: 16) {
-            // Screen Time Card
-            ReportStatCard(
-                iconName: "chart.bar.xaxis",
-                iconColor: brandRed,
-                value: totalDurationString,
-                subtitle: "Screen Time",
-                textPrimary: textPrimary,
-                textSecondary: textSecondary
-            )
-            
-            // Pickups Card
-            ReportStatCard(
-                iconName: "bell.badge",
-                iconColor: warningBronze,
-                value: "\(totalPickups)",
-                subtitle: "Pickups Today",
-                textPrimary: textPrimary,
-                textSecondary: textSecondary
-            )
+        if hasData {
+            HStack(spacing: 16) {
+                // Screen Time Card
+                ReportStatCard(
+                    iconName: "chart.bar.xaxis",
+                    iconColor: brandRed,
+                    value: totalDurationString,
+                    subtitle: "Screen Time",
+                    textPrimary: textPrimary,
+                    textSecondary: textSecondary
+                )
+                
+                // Pickups Card
+                ReportStatCard(
+                    iconName: "bell.badge",
+                    iconColor: warningBronze,
+                    value: "\(totalPickups)",
+                    subtitle: "Pickups Today",
+                    textPrimary: textPrimary,
+                    textSecondary: textSecondary
+                )
+            }
+        } else {
+            // Fallback when no data is available yet
+            HStack(spacing: 16) {
+                ReportStatCard(
+                    iconName: "chart.bar.xaxis",
+                    iconColor: brandRed,
+                    value: "—",
+                    subtitle: "Screen Time",
+                    textPrimary: textPrimary,
+                    textSecondary: textSecondary
+                )
+                
+                ReportStatCard(
+                    iconName: "bell.badge",
+                    iconColor: warningBronze,
+                    value: "—",
+                    subtitle: "Pickups Today",
+                    textPrimary: textPrimary,
+                    textSecondary: textSecondary
+                )
+            }
         }
     }
 }

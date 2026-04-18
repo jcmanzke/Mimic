@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import FamilyControls
 
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
@@ -12,9 +13,30 @@ struct SettingsView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Color.clear.appBackground()
+        ZStack {
+            Color.theme.backgroundStart
+                .ignoresSafeArea()
+            
+            VStack(spacing: 0) {
+                // Custom header
+                HStack {
+                    Text("Settings")
+                        .font(.appFont.largeTitle)
+                        .foregroundColor(Color.theme.textPrimary)
+                    
+                    Spacer()
+                    
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("Done")
+                            .font(.appFont.headline)
+                            .foregroundColor(Color.theme.primary)
+                    }
+                }
+                .padding(.horizontal, 24)
+                .padding(.top, 20)
+                .padding(.bottom, 8)
                 
                 ScrollView {
                     VStack(spacing: 24) {
@@ -32,18 +54,8 @@ struct SettingsView: View {
                         developerSection
 #endif
                     }
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 24)
                     .padding(.vertical, 24)
-                }
-            }
-            .navigationTitle("Settings")
-            .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Done") {
-                        dismiss()
-                    }
-                    .foregroundColor(Color.theme.textPrimary)
                 }
             }
         }
@@ -66,8 +78,9 @@ struct SettingsView: View {
             }
             .pickerStyle(.segmented)
         }
-        .padding(16)
-        .glassCard()
+        .padding(20)
+        .background(Color.white)
+        .cornerRadius(24)
     }
     
     // MARK: - Mode Description
@@ -89,13 +102,14 @@ struct SettingsView: View {
                 .font(.appFont.body)
                 .foregroundColor(Color.theme.textSecondary)
         }
-        .padding(16)
-        .glassCard()
+        .padding(20)
+        .background(Color.white)
+        .cornerRadius(24)
     }
     
     // MARK: - About
     private var aboutSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 16) {
             Text("About")
                 .font(.appFont.headline)
                 .foregroundColor(Color.theme.textPrimary)
@@ -112,6 +126,8 @@ struct SettingsView: View {
                     .foregroundColor(Color.theme.textPrimary)
             }
             
+            Divider()
+            
             HStack {
                 Text("Scars (Total Deaths)")
                     .font(.appFont.body)
@@ -123,9 +139,31 @@ struct SettingsView: View {
                     .font(.appFont.body)
                     .foregroundColor(Color.theme.critical)
             }
+            
+            Divider()
+            
+            Button {
+                UserDefaults.standard.removeObject(forKey: "hasCompletedOnboarding")
+                dismiss()
+            } label: {
+                HStack(spacing: 8) {
+                    Image(systemName: "arrow.counterclockwise")
+                        .font(.system(size: 14))
+                    Text("Replay Onboarding")
+                        .font(.appFont.body)
+                }
+                .foregroundColor(Color.theme.secondary)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 12)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color.theme.secondary.opacity(0.08))
+                )
+            }
         }
-        .padding(16)
-        .glassCard()
+        .padding(20)
+        .background(Color.white)
+        .cornerRadius(24)
     }
     
 #if DEBUG
@@ -185,13 +223,13 @@ struct SettingsView: View {
                 .tint(Color.black)
             }
         }
-        .padding(16)
+        .padding(20)
         .background(
             RoundedRectangle(cornerRadius: 24)
-                .fill(Color.black.opacity(0.05))
+                .fill(Color.theme.warning.opacity(0.06))
                 .overlay(
                     RoundedRectangle(cornerRadius: 24)
-                        .stroke(Color.theme.warning, style: StrokeStyle(lineWidth: 2, dash: [5]))
+                        .stroke(Color.theme.warning.opacity(0.3), style: StrokeStyle(lineWidth: 2, dash: [5]))
                 )
         )
     }

@@ -1,17 +1,28 @@
 import SwiftUI
 import SwiftData
 import DeviceActivity
+import FamilyControls
+
+extension DeviceActivityReport.Context {
+    static let totalActivity = Self("Total Activity")
+}
 
 struct PetDashboardView: View {
     @State private var vitalityManager: VitalityManager
     @State private var showingSettings = false
     @State private var wobbleAmount: Double = 0 // Track the current tilt
     @State private var appUsageManager = AppUsageManager()
-    @State private var filter = DeviceActivityFilter(
-        segment: .daily(
-            during: Calendar.current.dateInterval(of: .day, for: .now)!
+    
+    /// Recomputed each time SwiftUI reads it, so it always covers "today"
+    private var currentDayFilter: DeviceActivityFilter {
+        DeviceActivityFilter(
+            segment: .daily(
+                during: Calendar.current.dateInterval(of: .day, for: .now)!
+            ),
+            users: .all,
+            devices: .init([.iPhone])
         )
-    )
+    }
     
     init(modelContext: ModelContext) {
         let vm = VitalityManager(modelContext: modelContext)
@@ -53,6 +64,14 @@ struct PetDashboardView: View {
         }
         .onAppear {
             LiveActivityManager.shared.start()
+        }
+        .task {
+            // Ensure FamilyControls authorization is granted so DeviceActivityReport can show real data
+            do {
+                try await AuthorizationCenter.shared.requestAuthorization(for: .individual)
+            } catch {
+                print("[PetDashboard] FamilyControls authorization failed: \(error)")
+            }
         }
     }
     
@@ -165,7 +184,7 @@ struct PetDashboardView: View {
                 .padding(.horizontal, 8)
             
             // The actual sandboxed view loaded securely out-of-process via Extension
-            DeviceActivityReport(.totalActivity, filter: filter)
+            DeviceActivityReport(.totalActivity, filter: currentDayFilter)
                 .frame(height: 120) // Provide a fixed height to prevent collapsing during data load
             
             VitalityScoreCard(

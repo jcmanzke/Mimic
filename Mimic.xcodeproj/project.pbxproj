@@ -71,7 +71,7 @@
 		29CCC1F62F8AC4FC005C5447 /* Embed ExtensionKit Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
 				29CCC1F52F8AC4FC005C5447 /* DeviceActivityReportExtension.appex in Embed ExtensionKit Extensions */,
@@ -134,6 +134,13 @@
 			);
 			target = 29B5746A2F377CFC00BBD9B0 /* DeviceActivityMonitorExtension */;
 		};
+		29D612312F8AB8DA00FA0630 /* Exceptions for "PetWidgetExtension" folder in "PetWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 29B5747F2F3781E500BBD9B0 /* PetWidgetExtensionExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -172,6 +179,9 @@
 		};
 		29B574BB2F3784EA00BBD9B0 /* PetWidgetExtension */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				29D612312F8AB8DA00FA0630 /* Exceptions for "PetWidgetExtension" folder in "PetWidgetExtensionExtension" target */,
+			);
 			path = PetWidgetExtension;
 			sourceTree = "<group>";
 		};
@@ -385,6 +395,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				29B574BB2F3784EA00BBD9B0 /* PetWidgetExtension */,
 			);
 			name = PetWidgetExtensionExtension;
 			packageProductDependencies = (

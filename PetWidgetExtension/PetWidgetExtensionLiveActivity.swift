@@ -9,72 +9,165 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
-struct PetWidgetExtensionAttributes: ActivityAttributes {
-    public struct ContentState: Codable, Hashable {
-        // Dynamic stateful properties about your activity go here!
-        var emoji: String
-    }
-
-    // Fixed non-changing properties about your activity go here!
-    var name: String
-}
-
 struct PetWidgetExtensionLiveActivity: Widget {
     var body: some WidgetConfiguration {
-        ActivityConfiguration(for: PetWidgetExtensionAttributes.self) { context in
-            // Lock screen/banner UI goes here
-            VStack {
-                Text("Hello \(context.state.emoji)")
+        ActivityConfiguration(for: PetActivityAttributes.self) { context in
+            // MARK: - Lock Screen / Banner View
+            HStack(spacing: 16) {
+                // Pet image
+                Image(context.state.petImageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 56, height: 56)
+                    .clipShape(Circle())
+                
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack {
+                        Text(context.attributes.petName)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                        
+                        Spacer()
+                        
+                        Text("\(Int(context.state.health * 100))%")
+                            .font(.title3.bold())
+                            .foregroundColor(colorForHealth(context.state.health))
+                    }
+                    
+                    // Health bar
+                    GeometryReader { geo in
+                        ZStack(alignment: .leading) {
+                            Capsule()
+                                .fill(Color.white.opacity(0.2))
+                                .frame(height: 8)
+                            
+                            Capsule()
+                                .fill(colorForHealth(context.state.health))
+                                .frame(width: max(0, geo.size.width * context.state.health), height: 8)
+                        }
+                    }
+                    .frame(height: 8)
+                    
+                    Text(context.state.petState)
+                        .font(.caption)
+                        .foregroundColor(.white.opacity(0.7))
+                }
             }
-            .activityBackgroundTint(Color.cyan)
-            .activitySystemActionForegroundColor(Color.black)
-
+            .padding(16)
+            .activityBackgroundTint(Color.black.opacity(0.85))
+            .activitySystemActionForegroundColor(.white)
+            
         } dynamicIsland: { context in
             DynamicIsland {
-                // Expanded UI goes here.  Compose the expanded UI through
-                // various regions, like leading/trailing/center/bottom
+                // MARK: - Expanded View
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+                    Image(context.state.petImageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 48, height: 48)
+                        .clipShape(Circle())
                 }
+                
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
+                    VStack(alignment: .trailing, spacing: 2) {
+                        Text("\(Int(context.state.health * 100))%")
+                            .font(.title2.bold())
+                            .foregroundColor(colorForHealth(context.state.health))
+                        
+                        Text("Health")
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
+                    }
                 }
+                
+                DynamicIslandExpandedRegion(.center) {
+                    Text(context.attributes.petName)
+                        .font(.headline)
+                        .lineLimit(1)
+                }
+                
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom \(context.state.emoji)")
-                    // more content
+                    VStack(spacing: 8) {
+                        // Health bar
+                        GeometryReader { geo in
+                            ZStack(alignment: .leading) {
+                                Capsule()
+                                    .fill(Color.white.opacity(0.15))
+                                    .frame(height: 6)
+                                
+                                Capsule()
+                                    .fill(colorForHealth(context.state.health))
+                                    .frame(width: max(0, geo.size.width * context.state.health), height: 6)
+                            }
+                        }
+                        .frame(height: 6)
+                        
+                        Text(context.state.petState)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(.top, 4)
                 }
             } compactLeading: {
-                Text("L")
+                // MARK: - Compact Leading — Lumi's face
+                Image(context.state.petImageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 24, height: 24)
+                    .clipShape(Circle())
             } compactTrailing: {
-                Text("T \(context.state.emoji)")
+                // MARK: - Compact Trailing — Health gauge
+                Gauge(value: context.state.health) {
+                    Text("")
+                }
+                .gaugeStyle(.accessoryCircularCapacity)
+                .tint(colorForHealth(context.state.health))
+                .scaleEffect(0.6)
+                .frame(width: 24, height: 24)
             } minimal: {
-                Text(context.state.emoji)
+                // MARK: - Minimal — Small Lumi
+                Image(context.state.petImageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20, height: 20)
+                    .clipShape(Circle())
             }
-            .widgetURL(URL(string: "http://www.apple.com"))
-            .keylineTint(Color.red)
+            .widgetURL(URL(string: "mimic://dashboard"))
+        }
+    }
+    
+    /// Maps health value to a color for visual feedback
+    private func colorForHealth(_ health: Double) -> Color {
+        switch health {
+        case 0.8...1.0: return .green
+        case 0.4..<0.8: return .yellow
+        case 0.1..<0.4: return .orange
+        default: return .red
         }
     }
 }
 
-extension PetWidgetExtensionAttributes {
-    fileprivate static var preview: PetWidgetExtensionAttributes {
-        PetWidgetExtensionAttributes(name: "World")
+// MARK: - Previews
+
+extension PetActivityAttributes {
+    fileprivate static var preview: PetActivityAttributes {
+        PetActivityAttributes(petName: "Lumi")
     }
 }
 
-extension PetWidgetExtensionAttributes.ContentState {
-    fileprivate static var smiley: PetWidgetExtensionAttributes.ContentState {
-        PetWidgetExtensionAttributes.ContentState(emoji: "😀")
-     }
-     
-     fileprivate static var starEyes: PetWidgetExtensionAttributes.ContentState {
-         PetWidgetExtensionAttributes.ContentState(emoji: "🤩")
-     }
+extension PetActivityAttributes.ContentState {
+    fileprivate static var happy: PetActivityAttributes.ContentState {
+        PetActivityAttributes.ContentState(health: 0.92, petState: "Happy & Thriving ✨")
+    }
+    
+    fileprivate static var critical: PetActivityAttributes.ContentState {
+        PetActivityAttributes.ContentState(health: 0.08, petState: "Needs help! 💔")
+    }
 }
 
-#Preview("Notification", as: .content, using: PetWidgetExtensionAttributes.preview) {
+#Preview("Notification", as: .content, using: PetActivityAttributes.preview) {
    PetWidgetExtensionLiveActivity()
 } contentStates: {
-    PetWidgetExtensionAttributes.ContentState.smiley
-    PetWidgetExtensionAttributes.ContentState.starEyes
+    PetActivityAttributes.ContentState.happy
+    PetActivityAttributes.ContentState.critical
 }

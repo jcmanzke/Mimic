@@ -34,9 +34,14 @@
 - When a threshold is reached (e.g., every 5-minute increment), call the Vitality Manager to deduct health.
 
 ### C. Live Activity Agent (The Nudge)
-- Initialize a `LiveActivity` session on app launch.
-- **Dynamic Island (Compact)**: Shows the pet icon and a small health ring.
-- **Dynamic Island (Expanded)**: Shows the animated pet and a "Time Remaining" countdown before the next health drop.
+- **Manager**: `LiveActivityManager` singleton in `Mimic/ScreenPet/LiveActivity/LiveActivityManager.swift`.
+- **Attributes**: `PetActivityAttributes` in `Mimic/ScreenPet/LiveActivity/PetActivityAttributes.swift` (shared to widget extension target).
+- **Widget Rendering**: `PetWidgetExtensionLiveActivity` in `PetWidgetExtension/PetWidgetExtensionLiveActivity.swift`.
+- **Lifecycle**: Starts in `AppDelegate.didFinishLaunchingWithOptions` (after onboarding). Reuses existing activities if present.
+- **Dynamic Island (Compact)**: Shows Lumi's pet image (health-derived) and a circular health gauge.
+- **Dynamic Island (Expanded)**: Shows Lumi image, health percentage, health bar, and status text.
+- **Lock Screen Banner**: Lumi image, health bar, percentage, and pet state.
+- **State Persistence**: Health and pet state are persisted to App Group `UserDefaults` so the widget extension can read them.
 - **Constraints**: Must update via push notifications or background tasks to stay within the 12-hour Live Activity limit.
 
 ### D. Notification Manager (The Voice)
@@ -127,7 +132,8 @@ This repository contains more than just the iOS app. Below is an overview of all
 |:---|:---|
 | `Mimic/` | Main iOS app source code (SwiftUI, Swift 6) |
 | `Mimic/ScreenPet/Notifications/` | **NotificationManager** — centralized notification service |
-| `PetWidgetExtension/` | Home screen & lock screen widget target |
+| `PetWidgetExtension/` | Home screen widget, lock screen widget, and **Live Activity / Dynamic Island** target (includes own copy of pet assets) |
+| `Mimic/ScreenPet/LiveActivity/` | **LiveActivityManager** + **PetActivityAttributes** (shared to widget extension) |
 | `DeviceActivityMonitorExtension/` | Screen time monitoring extension |
 | `docs/` | **Landing page** hosted via GitHub Pages at `www.life-strategizer.com` |
 | `Desktop Landing Page/` | Original source file for the landing page (for reference) |

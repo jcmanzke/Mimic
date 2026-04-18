@@ -3,7 +3,7 @@
 //  DeviceActivityReportExtension
 //
 
-import DeviceActivity
+@preconcurrency import DeviceActivity
 import ExtensionKit
 import SwiftUI
 
@@ -14,15 +14,19 @@ extension DeviceActivityReport.Context {
     static let totalActivity = Self("Total Activity")
 }
 
-struct TotalActivityReport: DeviceActivityReportScene {
+struct TotalActivityConfiguration {
+    let durationString: String
+    let pickups: Int
+}
+
+nonisolated struct TotalActivityReport: DeviceActivityReportScene {
     // Define which context your scene will represent.
     let context: DeviceActivityReport.Context = .totalActivity
     
     // Define the custom configuration and the resulting view for this report.
-    // It returns a tuple of (durationString, pickupCount)
-    let content: (String, Int) -> TotalActivityView
+    let content: (TotalActivityConfiguration) -> TotalActivityView
     
-    nonisolated func makeConfiguration(representing data: DeviceActivityResults<DeviceActivityData>) async -> (String, Int) {
+    func makeConfiguration(representing data: DeviceActivityResults<DeviceActivityData>) async -> TotalActivityConfiguration {
         // Reformat the data into a configuration that can be used to create
         // the report's view.
         let formatter = DateComponentsFormatter()
@@ -36,12 +40,16 @@ struct TotalActivityReport: DeviceActivityReportScene {
         for await activityData in data {
             for await segment in activityData.activitySegments {
                 totalDuration += segment.totalActivityDuration
-                totalPickups += segment.totalPickups
+                for await category in segment.categories {
+                    for await app in category.applications {
+                        totalPickups += app.numberOfPickups
+                    }
+                }
             }
         }
         
         let durationString = formatter.string(from: totalDuration) ?? "0m"
         
-        return (durationString, totalPickups)
+        return TotalActivityConfiguration(durationString: durationString, pickups: totalPickups)
     }
 }

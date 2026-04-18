@@ -67,6 +67,9 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         // Re-schedule recurring notifications if user has completed onboarding
         if UserDefaults.standard.bool(forKey: "hasCompletedOnboarding") {
             NotificationManager.shared.scheduleRecurringNotifications()
+            
+            // Start Live Activity so Lumi appears in the Dynamic Island immediately
+            LiveActivityManager.shared.start()
         }
         
         return true

@@ -1,0 +1,926 @@
+2026-04-11 20:33:12 +0000 [MT] Accepted distribution method <IDEDistributionMethodiOSAppStoreDistribution: 0x600009c3b090>
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodTVOSAppStoreDistribution: 0x600009c0c7c0> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodAppStoreDistributionVisionOS: 0x600009c0c5d0> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodMacAppStoreDistribution: 0x600009c08ca0> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodAdHocVisionOS: 0x600009c3b1c0> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodWatchOSAdHoc: 0x600009c0c720> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodMacAdHoc: 0x600009c0c7d0> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Accepted distribution method <IDEDistributionMethodiOSAdHoc: 0x600009c08d30>
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodTVOSAdHoc: 0x600009c08cb0> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodTVOSEnterprise: 0x600009c3b250> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodWatchOSEnterprise: 0x600009c3b170> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodEnterpriseVisionOS: 0x600009c3b310> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Accepted distribution method <IDEDistributionMethodiOSEnterprise: 0x600009c08cc0>
+2026-04-11 20:33:12 +0000 [MT] Accepted distribution method <IDEDistributionMethodDevelopmentSigned: 0x600009c3b140>
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodDevelopmentSignedVisionOS: 0x600009c3b370> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodWatchOSDevelopmentSigned: 0x600009c0c7a0> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodTVOSDevelopmentSigned: 0x600009c0c790> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodDeveloperIDNotarizedApp: 0x600009c3b120> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodDeveloperID: 0x600009c0c730> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodSaveBuiltProducts: 0x600009c0c750> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodDevelopmentSignedMac: 0x600009c08d40> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodMacApplication: 0x600009c08d10> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodAppStoreValidationVisionOS: 0x600009c3b190> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodTVOSAppStoreValidation: 0x600009c0c760> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodMacAppStoreValidation: 0x600009c08d50> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodiOSAppStoreValidation: 0x600009c08cf0> because it doesn't support distributing archive
+2026-04-11 20:33:12 +0000 [MT] Rejected distribution method <IDEDistributionMethodExportArchive: 0x600009c0c700> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Accepted distribution method <IDEDistributionMethodiOSAppStoreDistribution: 0x600009c3b090>
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodTVOSAppStoreDistribution: 0x600009c0c7c0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodAppStoreDistributionVisionOS: 0x600009c0c5d0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodMacAppStoreDistribution: 0x600009c08ca0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodAdHocVisionOS: 0x600009c3b1c0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodWatchOSAdHoc: 0x600009c0c720> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodMacAdHoc: 0x600009c0c7d0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Accepted distribution method <IDEDistributionMethodiOSAdHoc: 0x600009c08d30>
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodTVOSAdHoc: 0x600009c08cb0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodTVOSEnterprise: 0x600009c3b250> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodWatchOSEnterprise: 0x600009c3b170> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodEnterpriseVisionOS: 0x600009c3b310> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Accepted distribution method <IDEDistributionMethodiOSEnterprise: 0x600009c08cc0>
+2026-04-11 20:33:18 +0000  Accepted distribution method <IDEDistributionMethodDevelopmentSigned: 0x600009c3b140>
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodDevelopmentSignedVisionOS: 0x600009c3b370> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodWatchOSDevelopmentSigned: 0x600009c0c7a0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodTVOSDevelopmentSigned: 0x600009c0c790> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodDeveloperIDNotarizedApp: 0x600009c3b120> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodDeveloperID: 0x600009c0c730> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodSaveBuiltProducts: 0x600009c0c750> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodDevelopmentSignedMac: 0x600009c08d40> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodMacApplication: 0x600009c08d10> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodAppStoreValidationVisionOS: 0x600009c3b190> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodTVOSAppStoreValidation: 0x600009c0c760> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodMacAppStoreValidation: 0x600009c08d50> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodiOSAppStoreValidation: 0x600009c08cf0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodExportArchive: 0x600009c0c700> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Available distribution methods: {(
+    <IDEDistributionMethodiOSAppStoreDistribution: 0x600009c3b090>,
+    <IDEDistributionMethodiOSAdHoc: 0x600009c08d30>,
+    <IDEDistributionMethodiOSEnterprise: 0x600009c08cc0>,
+    <IDEDistributionMethodDevelopmentSigned: 0x600009c3b140>
+)}
+2026-04-11 20:33:18 +0000  Accepted distribution method <IDEDistributionMethodiOSAppStoreDistribution: 0x600009c3b090>
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodTVOSAppStoreDistribution: 0x600009c0c7c0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodAppStoreDistributionVisionOS: 0x600009c0c5d0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodMacAppStoreDistribution: 0x600009c08ca0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodAdHocVisionOS: 0x600009c3b1c0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodWatchOSAdHoc: 0x600009c0c720> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodMacAdHoc: 0x600009c0c7d0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Accepted distribution method <IDEDistributionMethodiOSAdHoc: 0x600009c08d30>
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodTVOSAdHoc: 0x600009c08cb0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodTVOSEnterprise: 0x600009c3b250> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodWatchOSEnterprise: 0x600009c3b170> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodEnterpriseVisionOS: 0x600009c3b310> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Accepted distribution method <IDEDistributionMethodiOSEnterprise: 0x600009c08cc0>
+2026-04-11 20:33:18 +0000  Accepted distribution method <IDEDistributionMethodDevelopmentSigned: 0x600009c3b140>
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodDevelopmentSignedVisionOS: 0x600009c3b370> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodWatchOSDevelopmentSigned: 0x600009c0c7a0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodTVOSDevelopmentSigned: 0x600009c0c790> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodDeveloperIDNotarizedApp: 0x600009c3b120> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodDeveloperID: 0x600009c0c730> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodSaveBuiltProducts: 0x600009c0c750> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodDevelopmentSignedMac: 0x600009c08d40> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodMacApplication: 0x600009c08d10> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodAppStoreValidationVisionOS: 0x600009c3b190> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodTVOSAppStoreValidation: 0x600009c0c760> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodMacAppStoreValidation: 0x600009c08d50> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodiOSAppStoreValidation: 0x600009c08cf0> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Rejected distribution method <IDEDistributionMethodExportArchive: 0x600009c0c700> because it doesn't support distributing archive
+2026-04-11 20:33:18 +0000  Available distribution methods: {(
+    <IDEDistributionMethodiOSAppStoreDistribution: 0x600009c3b090>,
+    <IDEDistributionMethodiOSAdHoc: 0x600009c08d30>,
+    <IDEDistributionMethodiOSEnterprise: 0x600009c08cc0>,
+    <IDEDistributionMethodDevelopmentSigned: 0x600009c3b140>
+)}
+2026-04-11 20:33:18 +0000  IDEDistributionItem init <DVTFilePath:0x60000b22b000:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex'>
+2026-04-11 20:33:18 +0000  IDEDistributionItem init <DVTFilePath:0x60000b233d00:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex'>
+2026-04-11 20:33:18 +0000  IDEDistributionItem init <DVTFilePath:0x600017727aa0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework'>
+2026-04-11 20:33:18 +0000  IDEDistributionItem init <DVTFilePath:0x60000b233780:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex'>
+2026-04-11 20:33:18 +0000  IDEDistributionItem init <DVTFilePath:0x60002fa5d0e0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app'>
+2026-04-11 20:33:18 +0000  Set distributionItems on context: (
+    "<IDEDistributionItem: 0x60002fa423a0; bundleID='com.jcmanzke.Mimic', path='<DVTFilePath:0x60002fa5d0e0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33\U202fPM.xcarchive/Products/Applications/Mimic.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa07240; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000abe9e00; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(\n    \"1.2.840.113635.100.6.1.12\",\n    \"1.2.840.113635.100.6.1.2\"\n), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{\n    \"application-identifier\" = \"V8U7G8VKD3.com.jcmanzke.Mimic\";\n    \"aps-environment\" = development;\n    \"com.apple.developer.family-controls\" = 1;\n    \"com.apple.developer.team-identifier\" = V8U7G8VKD3;\n    \"com.apple.security.application-groups\" =     (\n        \"group.com.christianmanzke.Mimic\"\n    );\n    \"get-task-allow\" = 1;\n}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic', executablePath='<DVTFilePath:0x60002fa5cea0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33\U202fPM.xcarchive/Products/Applications/Mimic.app/Mimic'>', hardenedRuntime='0'>'>"
+)
+2026-04-11 20:33:18 +0000  Archs to thin for item /Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app are []
+2026-04-11 20:33:18 +0000  Archs to thin for item /Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex are []
+2026-04-11 20:33:18 +0000  Archs to thin for item /Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework are []
+2026-04-11 20:33:18 +0000  Archs to thin for item /Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex are []
+2026-04-11 20:33:18 +0000  Archs to thin for item /Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex are []
+2026-04-11 20:33:18 +0000  [OPTIONAL] Found platform <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>> and cert <DVTSigningCertificate: 0x60000abed980; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''> for <DVTFilePath:0x60002fa5d0e0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app'>
+2026-04-11 20:33:18 +0000  [OPTIONAL] Profile <DVTEmbeddedProvisioningProfile 0x60000abed980: name: iOS Team Provisioning Profile: com.jcmanzke.Mimic, UUID: 8e6895fb-a891-41d7-8e72-4e7c5c921227, teamName: Christian Manzke, teamIdentifierPrefixes: (
+    V8U7G8VKD3
+), entitlements: {
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic";
+    "aps-environment" = development;
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "V8U7G8VKD3.*",
+        "com.apple.token"
+    );
+}, appIdentifierName: XC com jcmanzke Mimic, applicationIdentifierPrefixes: (
+    V8U7G8VKD3
+), dateCreated: 2026-04-11 17:30:14 +0000, dateExpired: 2027-04-11 17:30:14 +0000, certificateKinds: {(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+)}, certificateSHA1Hashes: {(
+    CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474
+)}, supportedUDIDs: {(
+    "00008120-001630310283601e"
+)}, isUniversal: 0, isXcodeManaged: 1, platforms: {(
+    <DVTPlatform:0x60000307a900:'com.apple.platform.xros':<DVTFilePath:0x600003a49200:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/XROS.platform'>>,
+    <DVTPlatform:0x600003059200:'com.apple.platform.watchos':<DVTFilePath:0x600003560d90:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>,
+    <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>
+)}, filePath: <DVTFilePath:0x6000177278e0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/embedded.mobileprovision'>> for <DVTFilePath:0x60002fa5d0e0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app'> was an automatic profile
+2026-04-11 20:33:18 +0000  [OPTIONAL] Found platform <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>> and cert <DVTSigningCertificate: 0x60000abed980; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''> for <DVTFilePath:0x60000b22b000:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex'>
+2026-04-11 20:33:18 +0000  [OPTIONAL] Profile <DVTEmbeddedProvisioningProfile 0x60000abed980: name: iOS Team Provisioning Profile: com.jcmanzke.Mimic.DeviceActivityReportExtension, UUID: 8cdc3125-d691-4adc-8998-60f920c8ace8, teamName: Christian Manzke, teamIdentifierPrefixes: (
+    V8U7G8VKD3
+), entitlements: {
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityReportExtension";
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "V8U7G8VKD3.*",
+        "com.apple.token"
+    );
+}, appIdentifierName: XC com jcmanzke Mimic DeviceActivityReportExtension, applicationIdentifierPrefixes: (
+    V8U7G8VKD3
+), dateCreated: 2026-04-11 18:05:51 +0000, dateExpired: 2027-04-11 18:05:51 +0000, certificateKinds: {(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+)}, certificateSHA1Hashes: {(
+    CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474
+)}, supportedUDIDs: {(
+    "00008120-001630310283601e"
+)}, isUniversal: 0, isXcodeManaged: 1, platforms: {(
+    <DVTPlatform:0x60000307a900:'com.apple.platform.xros':<DVTFilePath:0x600003a49200:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/XROS.platform'>>,
+    <DVTPlatform:0x600003059200:'com.apple.platform.watchos':<DVTFilePath:0x600003560d90:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>,
+    <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>
+)}, filePath: <DVTFilePath:0x6000177268b0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex/embedded.mobileprovision'>> for <DVTFilePath:0x60000b22b000:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex'> was an automatic profile
+2026-04-11 20:33:18 +0000  [OPTIONAL] Found platform <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>> and cert <DVTSigningCertificate: 0x60000abed980; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''> for <DVTFilePath:0x600017727aa0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework'>
+2026-04-11 20:33:18 +0000  [OPTIONAL] Found platform <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>> and cert <DVTSigningCertificate: 0x60000abed980; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''> for <DVTFilePath:0x60000b233780:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex'>
+2026-04-11 20:33:18 +0000  [OPTIONAL] Profile <DVTEmbeddedProvisioningProfile 0x60000abed980: name: iOS Team Provisioning Profile: com.jcmanzke.Mimic.DeviceActivityMonitorExtension, UUID: 5e2e5955-19e6-46c7-a5bb-800acf44a91f, teamName: Christian Manzke, teamIdentifierPrefixes: (
+    V8U7G8VKD3
+), entitlements: {
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityMonitorExtension";
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "V8U7G8VKD3.*",
+        "com.apple.token"
+    );
+}, appIdentifierName: XC com jcmanzke Mimic DeviceActivityMonitorExtension, applicationIdentifierPrefixes: (
+    V8U7G8VKD3
+), dateCreated: 2026-04-11 17:30:19 +0000, dateExpired: 2027-04-11 17:30:19 +0000, certificateKinds: {(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+)}, certificateSHA1Hashes: {(
+    CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474
+)}, supportedUDIDs: {(
+    "00008120-001630310283601e"
+)}, isUniversal: 0, isXcodeManaged: 1, platforms: {(
+    <DVTPlatform:0x60000307a900:'com.apple.platform.xros':<DVTFilePath:0x600003a49200:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/XROS.platform'>>,
+    <DVTPlatform:0x600003059200:'com.apple.platform.watchos':<DVTFilePath:0x600003560d90:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>,
+    <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>
+)}, filePath: <DVTFilePath:0x60001772ac30:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex/embedded.mobileprovision'>> for <DVTFilePath:0x60000b233780:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex'> was an automatic profile
+2026-04-11 20:33:18 +0000  [OPTIONAL] Found platform <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>> and cert <DVTSigningCertificate: 0x60000abed980; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''> for <DVTFilePath:0x60000b233d00:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex'>
+2026-04-11 20:33:18 +0000  [OPTIONAL] Profile <DVTEmbeddedProvisioningProfile 0x60000ab3c780: name: iOS Team Provisioning Profile: com.jcmanzke.Mimic.PetWidgetExtension, UUID: ddf0ba3d-8611-4013-a810-00d741862196, teamName: Christian Manzke, teamIdentifierPrefixes: (
+    V8U7G8VKD3
+), entitlements: {
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.PetWidgetExtension";
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "V8U7G8VKD3.*",
+        "com.apple.token"
+    );
+}, appIdentifierName: XC com jcmanzke Mimic PetWidgetExtension, applicationIdentifierPrefixes: (
+    V8U7G8VKD3
+), dateCreated: 2026-04-11 17:30:16 +0000, dateExpired: 2027-04-11 17:30:16 +0000, certificateKinds: {(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+)}, certificateSHA1Hashes: {(
+    CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474
+)}, supportedUDIDs: {(
+    "00008120-001630310283601e"
+)}, isUniversal: 0, isXcodeManaged: 1, platforms: {(
+    <DVTPlatform:0x60000307a900:'com.apple.platform.xros':<DVTFilePath:0x600003a49200:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/XROS.platform'>>,
+    <DVTPlatform:0x600003059200:'com.apple.platform.watchos':<DVTFilePath:0x600003560d90:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>,
+    <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>
+)}, filePath: <DVTFilePath:0x6000177280e0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex/embedded.mobileprovision'>> for <DVTFilePath:0x60000b233d00:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex'> was an automatic profile
+2026-04-11 20:33:18 +0000  Distributable's provisioning style is Automatic
+2026-04-11 20:33:19 +0000  App Store Connect request for store configuration response: <DVTITunesConnectConfigurationResponse: 0x600020640940; isSuccessful='1', configuration='{
+    836LC3H4F9 =     {
+        "com.apple.platform.appletvos" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = carInBinary;
+                primaryIcons = carInBinary;
+            };
+            onDemandResources =             {
+                sizeLimits =                 {
+                    assetPack = 512000000;
+                    prioritizedTotal = 2000000000;
+                    total = 20000000000;
+                };
+                supportLevel = supported;
+            };
+        };
+        "com.apple.platform.iphoneos" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = unsupported;
+                primaryIcons = pngInBinary;
+            };
+            onDemandResources =             {
+                sizeLimits =                 {
+                    assetPack = 512000000;
+                    total = 20000000000;
+                };
+                supportLevel = supported;
+            };
+        };
+        "com.apple.platform.macosx" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = pngInBinary;
+                primaryIcons = pngInBinary;
+            };
+            onDemandResources =             {
+                supportLevel = unsupported;
+            };
+        };
+        "com.apple.platform.watchos" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = unsupported;
+                primaryIcons = pngInBinary;
+            };
+            onDemandResources =             {
+                supportLevel = unsupported;
+            };
+        };
+        "com.apple.platform.xros" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = carInBinary;
+                primaryIcons = carInBinary;
+            };
+            onDemandResources =             {
+                supportLevel = unsupported;
+            };
+        };
+        configModelVersion = "1.1";
+    };
+    V8U7G8VKD3 =     {
+        "com.apple.platform.appletvos" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = carInBinary;
+                primaryIcons = carInBinary;
+            };
+            onDemandResources =             {
+                sizeLimits =                 {
+                    assetPack = 512000000;
+                    prioritizedTotal = 2000000000;
+                    total = 20000000000;
+                };
+                supportLevel = supported;
+            };
+        };
+        "com.apple.platform.iphoneos" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = unsupported;
+                primaryIcons = pngInBinary;
+            };
+            onDemandResources =             {
+                sizeLimits =                 {
+                    assetPack = 512000000;
+                    total = 20000000000;
+                };
+                supportLevel = supported;
+            };
+        };
+        "com.apple.platform.macosx" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = pngInBinary;
+                primaryIcons = pngInBinary;
+            };
+            onDemandResources =             {
+                supportLevel = unsupported;
+            };
+        };
+        "com.apple.platform.watchos" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = unsupported;
+                primaryIcons = pngInBinary;
+            };
+            onDemandResources =             {
+                supportLevel = unsupported;
+            };
+        };
+        "com.apple.platform.xros" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = carInBinary;
+                primaryIcons = carInBinary;
+            };
+            onDemandResources =             {
+                supportLevel = unsupported;
+            };
+        };
+        configModelVersion = "1.1";
+    };
+    preflight =     (
+        836LC3H4F9,
+        V8U7G8VKD3
+    );
+}', alertMessage='(null)', errors='(null)', warnings='(null)', infoMessages='(null)'>
+2026-04-11 20:33:19 +0000  App Store Connect team IDs for account (null) are (
+    836LC3H4F9,
+    V8U7G8VKD3
+)
+2026-04-11 20:33:21 +0000  Starting evaluation for distribution items:
+(
+    "<IDEDistributionItem: 0x60002fa423a0; bundleID='com.jcmanzke.Mimic', path='<DVTFilePath:0x60002fa5d0e0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33\U202fPM.xcarchive/Products/Applications/Mimic.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa07240; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab1ccc0; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(\n    \"1.2.840.113635.100.6.1.12\",\n    \"1.2.840.113635.100.6.1.2\"\n), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{\n    \"application-identifier\" = \"V8U7G8VKD3.com.jcmanzke.Mimic\";\n    \"aps-environment\" = development;\n    \"com.apple.developer.family-controls\" = 1;\n    \"com.apple.developer.team-identifier\" = V8U7G8VKD3;\n    \"com.apple.security.application-groups\" =     (\n        \"group.com.christianmanzke.Mimic\"\n    );\n    \"get-task-allow\" = 1;\n}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic', executablePath='<DVTFilePath:0x60002fa5cea0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33\U202fPM.xcarchive/Products/Applications/Mimic.app/Mimic'>', hardenedRuntime='0'>'>"
+)
+2026-04-11 20:33:21 +0000 [MT] Evaluating <IDEDistributionItemProvisionable: 0x60000b2d2a00; distributionItem='<IDEDistributionItem: 0x60002fa411a0; bundleID='com.jcmanzke.Mimic.DeviceActivityMonitorExtension', path='<DVTFilePath:0x60000b233780:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa393e0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000abee7c0; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityMonitorExtension";
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.DeviceActivityMonitorExtension', executablePath='<DVTFilePath:0x600017728690:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex/DeviceActivityMonitorExtension'>', hardenedRuntime='0'>'>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x600000145580; teamID='V8U7G8VKD3', teamName='Christian Manzke', teamType='Individual', username='jcmanzke@gmail.com', isFreeProvisioningTeam='0'>', method='<IDEDistributionMethodiOSAppStoreDistribution: 0x600009c3b090>', provisioningStyle='0', entitlementsProcessors='(
+    "<IDEiCloudEntitlementsProcessor: 0x600018d6d950>",
+    "<IDEAppAttestEnvironmentEntitlementsProcessor: 0x600018d6d5f0>",
+    "<IDEClassKitEntitlementsProcessor: 0x600018d6cab0>",
+    "<IDEAppIdentifierPrefixedEntitlementsProcessor: 0x600018d78a50>"
+)'> with overrides <IDEProvisionableOverrides 0x6000069e82c0: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddb1c10>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa411a0; bundleID='com.jcmanzke.Mimic.DeviceActivityMonitorExtension', path='<DVTFilePath:0x60000b233780:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa393e0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000abed5c0; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityMonitorExtension";
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.DeviceActivityMonitorExtension', executablePath='<DVTFilePath:0x600017728690:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex/DeviceActivityMonitorExtension'>', hardenedRuntime='0'>'> from <IDEiCloudEntitlementsProcessor: 0x600018d6d950>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa411a0; bundleID='com.jcmanzke.Mimic.DeviceActivityMonitorExtension', path='<DVTFilePath:0x60000b233780:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa393e0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000abee7c0; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityMonitorExtension";
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.DeviceActivityMonitorExtension', executablePath='<DVTFilePath:0x600017728690:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex/DeviceActivityMonitorExtension'>', hardenedRuntime='0'>'> from <IDEAppAttestEnvironmentEntitlementsProcessor: 0x600018d6d5f0>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa411a0; bundleID='com.jcmanzke.Mimic.DeviceActivityMonitorExtension', path='<DVTFilePath:0x60000b233780:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa393e0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000abed5c0; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityMonitorExtension";
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.DeviceActivityMonitorExtension', executablePath='<DVTFilePath:0x600017728690:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex/DeviceActivityMonitorExtension'>', hardenedRuntime='0'>'> from <IDEClassKitEntitlementsProcessor: 0x600018d6cab0>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa411a0; bundleID='com.jcmanzke.Mimic.DeviceActivityMonitorExtension', path='<DVTFilePath:0x60000b233780:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa393e0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000abee7c0; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityMonitorExtension";
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.DeviceActivityMonitorExtension', executablePath='<DVTFilePath:0x600017728690:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/DeviceActivityMonitorExtension.appex/DeviceActivityMonitorExtension'>', hardenedRuntime='0'>'> from <IDEAppIdentifierPrefixedEntitlementsProcessor: 0x600018d78a50>: {
+    "application-identifier" = "$(AppIdentifierPrefix)com.jcmanzke.Mimic.DeviceActivityMonitorExtension";
+}
+2026-04-11 20:33:21 +0000 [MT] Evaluating <IDEDistributionItemProvisionable: 0x60000b2d2380; distributionItem='<IDEDistributionItem: 0x60002fa39aa0; bundleID='com.jcmanzke.Mimic.DeviceActivityReportExtension', path='<DVTFilePath:0x60000b22b000:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa40f00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab31980; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityReportExtension";
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.DeviceActivityReportExtension', executablePath='<DVTFilePath:0x600017724a10:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex/DeviceActivityReportExtension'>', hardenedRuntime='0'>'>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x600000145580; teamID='V8U7G8VKD3', teamName='Christian Manzke', teamType='Individual', username='jcmanzke@gmail.com', isFreeProvisioningTeam='0'>', method='<IDEDistributionMethodiOSAppStoreDistribution: 0x600009c3b090>', provisioningStyle='0', entitlementsProcessors='(
+    "<IDEiCloudEntitlementsProcessor: 0x600018d6d0b0>",
+    "<IDEAppAttestEnvironmentEntitlementsProcessor: 0x600018d6d050>",
+    "<IDEClassKitEntitlementsProcessor: 0x600018d6d620>",
+    "<IDEAppIdentifierPrefixedEntitlementsProcessor: 0x600018d787b0>"
+)'> with overrides <IDEProvisionableOverrides 0x600006910840: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddb0300>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa39aa0; bundleID='com.jcmanzke.Mimic.DeviceActivityReportExtension', path='<DVTFilePath:0x60000b22b000:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa40f00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab31e00; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityReportExtension";
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.DeviceActivityReportExtension', executablePath='<DVTFilePath:0x600017724a10:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex/DeviceActivityReportExtension'>', hardenedRuntime='0'>'> from <IDEiCloudEntitlementsProcessor: 0x600018d6d0b0>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa39aa0; bundleID='com.jcmanzke.Mimic.DeviceActivityReportExtension', path='<DVTFilePath:0x60000b22b000:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa40f00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab1f900; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityReportExtension";
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.DeviceActivityReportExtension', executablePath='<DVTFilePath:0x600017724a10:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex/DeviceActivityReportExtension'>', hardenedRuntime='0'>'> from <IDEAppAttestEnvironmentEntitlementsProcessor: 0x600018d6d050>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa39aa0; bundleID='com.jcmanzke.Mimic.DeviceActivityReportExtension', path='<DVTFilePath:0x60000b22b000:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa40f00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab3c0c0; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityReportExtension";
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.DeviceActivityReportExtension', executablePath='<DVTFilePath:0x600017724a10:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex/DeviceActivityReportExtension'>', hardenedRuntime='0'>'> from <IDEClassKitEntitlementsProcessor: 0x600018d6d620>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa39aa0; bundleID='com.jcmanzke.Mimic.DeviceActivityReportExtension', path='<DVTFilePath:0x60000b22b000:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa40f00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab18f00; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityReportExtension";
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.DeviceActivityReportExtension', executablePath='<DVTFilePath:0x600017724a10:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Extensions/DeviceActivityReportExtension.appex/DeviceActivityReportExtension'>', hardenedRuntime='0'>'> from <IDEAppIdentifierPrefixedEntitlementsProcessor: 0x600018d787b0>: {
+    "application-identifier" = "$(AppIdentifierPrefix)com.jcmanzke.Mimic.DeviceActivityReportExtension";
+}
+2026-04-11 20:33:21 +0000 [MT] Evaluating <IDEDistributionItemProvisionable: 0x60000b2d3d00; distributionItem='<IDEDistributionItem: 0x60002fa423a0; bundleID='com.jcmanzke.Mimic', path='<DVTFilePath:0x60002fa5d0e0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa07240; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab18fc0; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic";
+    "aps-environment" = development;
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic', executablePath='<DVTFilePath:0x60002fa5cea0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Mimic'>', hardenedRuntime='0'>'>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x600000145580; teamID='V8U7G8VKD3', teamName='Christian Manzke', teamType='Individual', username='jcmanzke@gmail.com', isFreeProvisioningTeam='0'>', method='<IDEDistributionMethodiOSAppStoreDistribution: 0x600009c3b090>', provisioningStyle='0', entitlementsProcessors='(
+    "<IDEiCloudEntitlementsProcessor: 0x600018d6cc30>",
+    "<IDEAppAttestEnvironmentEntitlementsProcessor: 0x600018d6cd80>",
+    "<IDEClassKitEntitlementsProcessor: 0x600018d6d500>",
+    "<IDEAppIdentifierPrefixedEntitlementsProcessor: 0x600018d78c60>"
+)'> with overrides <IDEProvisionableOverrides 0x6000069f0630: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddacef0>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa423a0; bundleID='com.jcmanzke.Mimic', path='<DVTFilePath:0x60002fa5d0e0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa07240; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab5ce40; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic";
+    "aps-environment" = development;
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic', executablePath='<DVTFilePath:0x60002fa5cea0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Mimic'>', hardenedRuntime='0'>'> from <IDEiCloudEntitlementsProcessor: 0x600018d6cc30>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa423a0; bundleID='com.jcmanzke.Mimic', path='<DVTFilePath:0x60002fa5d0e0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa07240; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab3c300; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic";
+    "aps-environment" = development;
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic', executablePath='<DVTFilePath:0x60002fa5cea0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Mimic'>', hardenedRuntime='0'>'> from <IDEAppAttestEnvironmentEntitlementsProcessor: 0x600018d6cd80>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa423a0; bundleID='com.jcmanzke.Mimic', path='<DVTFilePath:0x60002fa5d0e0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa07240; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab5fd80; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic";
+    "aps-environment" = development;
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic', executablePath='<DVTFilePath:0x60002fa5cea0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Mimic'>', hardenedRuntime='0'>'> from <IDEClassKitEntitlementsProcessor: 0x600018d6d500>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa423a0; bundleID='com.jcmanzke.Mimic', path='<DVTFilePath:0x60002fa5d0e0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa07240; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab5ce40; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic";
+    "aps-environment" = development;
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic', executablePath='<DVTFilePath:0x60002fa5cea0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Mimic'>', hardenedRuntime='0'>'> from <IDEAppIdentifierPrefixedEntitlementsProcessor: 0x600018d78c60>: {
+    "application-identifier" = "$(AppIdentifierPrefix)com.jcmanzke.Mimic";
+}
+2026-04-11 20:33:21 +0000 [MT] Evaluating <IDEDistributionItemProvisionable: 0x60000b2d1780; distributionItem='<IDEDistributionItem: 0x60002fa7c300; bundleID='com.jcmanzke.Mimic.PetWidgetExtension', path='<DVTFilePath:0x60000b233d00:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa3a7c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab18840; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.PetWidgetExtension";
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.PetWidgetExtension', executablePath='<DVTFilePath:0x6000177291f0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex/PetWidgetExtensionExtension'>', hardenedRuntime='0'>'>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x600000145580; teamID='V8U7G8VKD3', teamName='Christian Manzke', teamType='Individual', username='jcmanzke@gmail.com', isFreeProvisioningTeam='0'>', method='<IDEDistributionMethodiOSAppStoreDistribution: 0x600009c3b090>', provisioningStyle='0', entitlementsProcessors='(
+    "<IDEiCloudEntitlementsProcessor: 0x600018d6d470>",
+    "<IDEAppAttestEnvironmentEntitlementsProcessor: 0x600018d6c0c0>",
+    "<IDEClassKitEntitlementsProcessor: 0x600018d6d1d0>",
+    "<IDEAppIdentifierPrefixedEntitlementsProcessor: 0x600018d78b10>"
+)'> with overrides <IDEProvisionableOverrides 0x600006934580: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddacfb0>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa7c300; bundleID='com.jcmanzke.Mimic.PetWidgetExtension', path='<DVTFilePath:0x60000b233d00:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa3a7c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab5e640; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.PetWidgetExtension";
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.PetWidgetExtension', executablePath='<DVTFilePath:0x6000177291f0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex/PetWidgetExtensionExtension'>', hardenedRuntime='0'>'> from <IDEiCloudEntitlementsProcessor: 0x600018d6d470>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa7c300; bundleID='com.jcmanzke.Mimic.PetWidgetExtension', path='<DVTFilePath:0x60000b233d00:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa3a7c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab195c0; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.PetWidgetExtension";
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.PetWidgetExtension', executablePath='<DVTFilePath:0x6000177291f0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex/PetWidgetExtensionExtension'>', hardenedRuntime='0'>'> from <IDEAppAttestEnvironmentEntitlementsProcessor: 0x600018d6c0c0>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa7c300; bundleID='com.jcmanzke.Mimic.PetWidgetExtension', path='<DVTFilePath:0x60000b233d00:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa3a7c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab5c6c0; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.PetWidgetExtension";
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.PetWidgetExtension', executablePath='<DVTFilePath:0x6000177291f0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex/PetWidgetExtensionExtension'>', hardenedRuntime='0'>'> from <IDEClassKitEntitlementsProcessor: 0x600018d6d1d0>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa7c300; bundleID='com.jcmanzke.Mimic.PetWidgetExtension', path='<DVTFilePath:0x60000b233d00:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa3a7c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab5e640; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='{
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.PetWidgetExtension";
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 1;
+}', teamID='V8U7G8VKD3', identifier='com.jcmanzke.Mimic.PetWidgetExtension', executablePath='<DVTFilePath:0x6000177291f0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/PlugIns/PetWidgetExtensionExtension.appex/PetWidgetExtensionExtension'>', hardenedRuntime='0'>'> from <IDEAppIdentifierPrefixedEntitlementsProcessor: 0x600018d78b10>: {
+    "application-identifier" = "$(AppIdentifierPrefix)com.jcmanzke.Mimic.PetWidgetExtension";
+}
+2026-04-11 20:33:21 +0000 [MT] Evaluating <IDEDistributionItemProvisionable: 0x60000b2d2b80; distributionItem='<IDEDistributionItem: 0x60002fa41260; bundleID='rive.app.ios.runtime.RiveRuntime', path='<DVTFilePath:0x600017727aa0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa39f20; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab5cb40; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='(null)', teamID='V8U7G8VKD3', identifier='rive.app.ios.runtime.RiveRuntime', executablePath='<DVTFilePath:0x60002fa59ec0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework/RiveRuntime'>', hardenedRuntime='0'>'>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x600000145580; teamID='V8U7G8VKD3', teamName='Christian Manzke', teamType='Individual', username='jcmanzke@gmail.com', isFreeProvisioningTeam='0'>', method='<IDEDistributionMethodiOSAppStoreDistribution: 0x600009c3b090>', provisioningStyle='0', entitlementsProcessors='(
+    "<IDEiCloudEntitlementsProcessor: 0x600018d6d020>",
+    "<IDEAppAttestEnvironmentEntitlementsProcessor: 0x600018d6d920>",
+    "<IDEClassKitEntitlementsProcessor: 0x600018d6d230>",
+    "<IDEAppIdentifierPrefixedEntitlementsProcessor: 0x600018d78a80>"
+)'> with overrides <IDEProvisionableOverrides 0x600006927910: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddb1e80>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa41260; bundleID='rive.app.ios.runtime.RiveRuntime', path='<DVTFilePath:0x600017727aa0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa39f20; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab12700; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='(null)', teamID='V8U7G8VKD3', identifier='rive.app.ios.runtime.RiveRuntime', executablePath='<DVTFilePath:0x60002fa59ec0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework/RiveRuntime'>', hardenedRuntime='0'>'> from <IDEiCloudEntitlementsProcessor: 0x600018d6d020>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa41260; bundleID='rive.app.ios.runtime.RiveRuntime', path='<DVTFilePath:0x600017727aa0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa39f20; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab10600; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='(null)', teamID='V8U7G8VKD3', identifier='rive.app.ios.runtime.RiveRuntime', executablePath='<DVTFilePath:0x60002fa59ec0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework/RiveRuntime'>', hardenedRuntime='0'>'> from <IDEAppAttestEnvironmentEntitlementsProcessor: 0x600018d6d920>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa41260; bundleID='rive.app.ios.runtime.RiveRuntime', path='<DVTFilePath:0x600017727aa0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa39f20; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab78fc0; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='(null)', teamID='V8U7G8VKD3', identifier='rive.app.ios.runtime.RiveRuntime', executablePath='<DVTFilePath:0x60002fa59ec0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework/RiveRuntime'>', hardenedRuntime='0'>'> from <IDEClassKitEntitlementsProcessor: 0x600018d6d230>: {
+}
+2026-04-11 20:33:21 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x60002fa41260; bundleID='rive.app.ios.runtime.RiveRuntime', path='<DVTFilePath:0x600017727aa0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60002fa39f20; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000ab5cb40; name='Apple Development: Christian Manzke (JZ83Q3N899)', hash='CB2BBDB09B7D4A90CABC22FDABCBFF2ED499E474', serialNumber='7722528F5E93EEAA76DDF5F17B590FAB', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-01-17 19:38:15 +0000''>', entitlements='(null)', teamID='V8U7G8VKD3', identifier='rive.app.ios.runtime.RiveRuntime', executablePath='<DVTFilePath:0x60002fa59ec0:'/Users/christianmanzke/Library/Developer/Xcode/Archives/2026-04-11/Mimic 4-11-26, 10.33 PM.xcarchive/Products/Applications/Mimic.app/Frameworks/RiveRuntime.framework/RiveRuntime'>', hardenedRuntime='0'>'> from <IDEAppIdentifierPrefixedEntitlementsProcessor: 0x600018d78a80>: {
+}
+2026-04-11 20:33:23 +0000 [MT] Evaluation for RiveRuntime.framework is <IDEProvisionableStatusEvaluation 0x6000177aa4c0: inputs: <IDEProvisionableStatusEvalutorInputs 0x60002be41cc0: provisionableSnapshot: <IDEProvisionableSnapshot 0x600018d72bb0: name: RiveRuntime.framework, configurations: {
+    Default = "<_IDEProvisionableConfigurationSnapshot 0x60001ef4dea0: name: Default, provisioningStyle: 0, certificateSigningStyle: 2, team: <IDEProvisioningDisambiguatableBasicTeam: 0x600000145580; teamID='V8U7G8VKD3', teamName='Christian Manzke', teamType='Individual', username='jcmanzke@gmail.com', isFreeProvisioningTeam='0'>, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddb1dd0>, platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), bundleIdentifier: rive.app.ios.runtime.RiveRuntime, profileSpecifier: (null), certificateIdentifier: iPhone Distribution, entitlementsFilePath: (null), baseEntitlements: <IDEProvisionableEntitlements: 0x600005bca8c0; signedEntitlements='{\n}', simulatedEntitlements='(null)'>, entitlementsExpansion: <IDEDistributionProvisioningEntitlementsExpansion: 0x60000ddb1c20>, entitlementsDestination: 1, allowSigningWithoutTeamSelection: 0, signingRequiresTeam: 0, appIDFeatures: <DVTPortalAppIDFeatures 0x600005470520: Features: {\n}, Containers: {\n}>, provisioningPurpose: app-store, supportsIOSMac: 0, areFeaturesUpToDate: 0>";
+}, overrides: <IDEProvisionableOverrides 0x600006927910: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddb1e80>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>>>, configuration: Default, codesignParameterSnapshot: <IDECodesignParameterSnapshot: 0x600018d670f0>:
+Identity: 1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478
+Certificate <DVTSigningCertificate: 0x60000a426940; name='Apple Distribution: Christian Manzke (V8U7G8VKD3)', hash='1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478', serialNumber='66BF5B4664A870A35A12BC4A828344AE', certificateKinds='(
+    "1.2.840.113635.100.6.1.7",
+    "1.2.840.113635.100.6.1.4"
+), issueDate='2026-01-28 22:53:32 +0000''>>, errors: (null)>
+2026-04-11 20:33:26 +0000 [MT] Evaluation for DeviceActivityMonitorExtension.appex is <IDEProvisionableStatusEvaluation 0x6000177ad730: inputs: <IDEProvisionableStatusEvalutorInputs 0x60002bd64000: provisionableSnapshot: <IDEProvisionableSnapshot 0x600018d68000: name: DeviceActivityMonitorExtension.appex, configurations: {
+    Default = "<_IDEProvisionableConfigurationSnapshot 0x60001ef4c820: name: Default, provisioningStyle: 0, certificateSigningStyle: 2, team: <IDEProvisioningDisambiguatableBasicTeam: 0x600000145580; teamID='V8U7G8VKD3', teamName='Christian Manzke', teamType='Individual', username='jcmanzke@gmail.com', isFreeProvisioningTeam='0'>, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddb1ca0>, platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), bundleIdentifier: com.jcmanzke.Mimic.DeviceActivityMonitorExtension, profileSpecifier: (null), certificateIdentifier: iPhone Distribution, entitlementsFilePath: (null), baseEntitlements: <IDEProvisionableEntitlements: 0x60000592f2c0; signedEntitlements='{\n    \"application-identifier\" = \"$(AppIdentifierPrefix)com.jcmanzke.Mimic.DeviceActivityMonitorExtension\";\n    \"com.apple.developer.family-controls\" = 1;\n    \"com.apple.developer.team-identifier\" = V8U7G8VKD3;\n    \"com.apple.security.application-groups\" =     (\n        \"group.com.christianmanzke.Mimic\"\n    );\n}', simulatedEntitlements='(null)'>, entitlementsExpansion: <IDEDistributionProvisioningEntitlementsExpansion: 0x60000ddb1c80>, entitlementsDestination: 1, allowSigningWithoutTeamSelection: 0, signingRequiresTeam: 0, appIDFeatures: <DVTPortalAppIDFeatures 0x600005af0c40: Features: {\n    \"<DVTPortalProfileFeature: 0x60000f508930; id='FAMILY_CONTROLS_DISTRIBUTION', userDescription='Family Controls (Distribution)', platforms='.xros, .iphoneos'>\" = 1;\n    \"<DVTPortalProfileFeature: 0x600017721ab0; id='APP_GROUPS', userDescription='App Groups', platforms='.macosx, .appletvos, .watchos, .xros, .iphoneos'>\" = 1;\n}, Containers: {\n    \"Xcode.Portal.Container.Type.AppGroup\" = \"{(\\n    \\\"group.com.christianmanzke.Mimic\\\"\\n)}\";\n}>, provisioningPurpose: app-store, supportsIOSMac: 0, areFeaturesUpToDate: 0>";
+}, overrides: <IDEProvisionableOverrides 0x6000069e82c0: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddb1c10>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>>>, configuration: Default, codesignParameterSnapshot: <IDECodesignParameterSnapshot: 0x600018cbc900>:
+Profile:  <DVTEmbeddedProvisioningProfile 0x60000ab44780: name: iOS Team Store Provisioning Profile: com.jcmanzke.Mimic.DeviceActivityMonitorExtension, UUID: cf37e4b9-3f1a-4ff9-a981-92800ec9d497, teamName: Christian Manzke, teamIdentifierPrefixes: (
+    V8U7G8VKD3
+), entitlements: {
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityMonitorExtension";
+    "beta-reports-active" = 1;
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "V8U7G8VKD3.*",
+        "com.apple.token"
+    );
+}, appIdentifierName: XC com jcmanzke Mimic DeviceActivityMonitorExtension, applicationIdentifierPrefixes: (
+    V8U7G8VKD3
+), dateCreated: 2026-04-11 20:33:25 +0000, dateExpired: 2027-01-28 22:53:31 +0000, certificateKinds: {(
+    "1.2.840.113635.100.6.1.7",
+    "1.2.840.113635.100.6.1.4"
+)}, certificateSHA1Hashes: {(
+    017B9B3B1D7F5829F1C90918FA316599C32CE5F4,
+    1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478
+)}, supportedUDIDs: {(
+)}, isUniversal: 0, isXcodeManaged: 1, platforms: {(
+    <DVTPlatform:0x60000307a900:'com.apple.platform.xros':<DVTFilePath:0x600003a49200:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/XROS.platform'>>,
+    <DVTPlatform:0x600003059200:'com.apple.platform.watchos':<DVTFilePath:0x600003560d90:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>,
+    <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>
+)}, filePath: <DVTFilePath:0x600016c44900:'/Users/christianmanzke/Library/Developer/Xcode/UserData/Provisioning Profiles/cf37e4b9-3f1a-4ff9-a981-92800ec9d497.mobileprovision'>>
+Identity: 1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478
+Certificate <DVTSigningCertificate: 0x60000a426b80; name='Apple Distribution: Christian Manzke (V8U7G8VKD3)', hash='1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478', serialNumber='66BF5B4664A870A35A12BC4A828344AE', certificateKinds='(
+    "1.2.840.113635.100.6.1.7",
+    "1.2.840.113635.100.6.1.4"
+), issueDate='2026-01-28 22:53:32 +0000''>>, errors: (null)>
+2026-04-11 20:33:28 +0000 [MT] Evaluation for DeviceActivityReportExtension.appex is <IDEProvisionableStatusEvaluation 0x60001772b720: inputs: <IDEProvisionableStatusEvalutorInputs 0x60002bdbdc20: provisionableSnapshot: <IDEProvisionableSnapshot 0x600018d68cf0: name: DeviceActivityReportExtension.appex, configurations: {
+    Default = "<_IDEProvisionableConfigurationSnapshot 0x60001ef72080: name: Default, provisioningStyle: 0, certificateSigningStyle: 2, team: <IDEProvisioningDisambiguatableBasicTeam: 0x600000145580; teamID='V8U7G8VKD3', teamName='Christian Manzke', teamType='Individual', username='jcmanzke@gmail.com', isFreeProvisioningTeam='0'>, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddace50>, platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), bundleIdentifier: com.jcmanzke.Mimic.DeviceActivityReportExtension, profileSpecifier: (null), certificateIdentifier: iPhone Distribution, entitlementsFilePath: (null), baseEntitlements: <IDEProvisionableEntitlements: 0x600005aa4e80; signedEntitlements='{\n    \"application-identifier\" = \"$(AppIdentifierPrefix)com.jcmanzke.Mimic.DeviceActivityReportExtension\";\n    \"com.apple.developer.family-controls\" = 1;\n    \"com.apple.developer.team-identifier\" = V8U7G8VKD3;\n}', simulatedEntitlements='(null)'>, entitlementsExpansion: <IDEDistributionProvisioningEntitlementsExpansion: 0x60000ddace80>, entitlementsDestination: 1, allowSigningWithoutTeamSelection: 0, signingRequiresTeam: 0, appIDFeatures: <DVTPortalAppIDFeatures 0x600005adb740: Features: {\n    \"<DVTPortalProfileFeature: 0x60000f5601c0; id='FAMILY_CONTROLS', userDescription='Family Controls (Development)', platforms='.iphoneos, .xros'>\" = 1;\n}, Containers: {\n}>, provisioningPurpose: app-store, supportsIOSMac: 0, areFeaturesUpToDate: 0>";
+}, overrides: <IDEProvisionableOverrides 0x600006910840: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddb0300>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>>>, configuration: Default, codesignParameterSnapshot: (null), errors: (
+    "Error Domain=IDECodesignResolverErrorDomain Code=0 \"Provisioning profile \"iOS Team Store Provisioning Profile: com.jcmanzke.Mimic.DeviceActivityReportExtension\" failed qualification checks\" UserInfo={qualification=<IDEProfileQualification: 0x60001ef472a0>, NSLocalizedDescription=Provisioning profile \"iOS Team Store Provisioning Profile: com.jcmanzke.Mimic.DeviceActivityReportExtension\" failed qualification checks, NSLocalizedRecoverySuggestion=Profile failed qualification checks}"
+)>
+2026-04-11 20:33:31 +0000 [MT] Evaluation for Mimic.app is <IDEProvisionableStatusEvaluation 0x60001772c150: inputs: <IDEProvisionableStatusEvalutorInputs 0x60002bd62fd0: provisionableSnapshot: <IDEProvisionableSnapshot 0x600018d6ad30: name: Mimic.app, configurations: {
+    Default = "<_IDEProvisionableConfigurationSnapshot 0x60001ef737a0: name: Default, provisioningStyle: 0, certificateSigningStyle: 2, team: <IDEProvisioningDisambiguatableBasicTeam: 0x600000145580; teamID='V8U7G8VKD3', teamName='Christian Manzke', teamType='Individual', username='jcmanzke@gmail.com', isFreeProvisioningTeam='0'>, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddacf80>, platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), bundleIdentifier: com.jcmanzke.Mimic, profileSpecifier: (null), certificateIdentifier: iPhone Distribution, entitlementsFilePath: (null), baseEntitlements: <IDEProvisionableEntitlements: 0x600005b79ea0; signedEntitlements='{\n    \"application-identifier\" = \"$(AppIdentifierPrefix)com.jcmanzke.Mimic\";\n    \"aps-environment\" = development;\n    \"com.apple.developer.family-controls\" = 1;\n    \"com.apple.developer.team-identifier\" = V8U7G8VKD3;\n    \"com.apple.security.application-groups\" =     (\n        \"group.com.christianmanzke.Mimic\"\n    );\n}', simulatedEntitlements='(null)'>, entitlementsExpansion: <IDEDistributionProvisioningEntitlementsExpansion: 0x60000ddacfc0>, entitlementsDestination: 1, allowSigningWithoutTeamSelection: 0, signingRequiresTeam: 0, appIDFeatures: <DVTPortalAppIDFeatures 0x600005be0000: Features: {\n    \"<DVTPortalProfileFeature: 0x60001771e450; id='APP_GROUPS', userDescription='App Groups', platforms='.xros, .appletvos, .macosx, .watchos, .iphoneos'>\" = 1;\n    \"<DVTPortalProfileFeature: 0x60000b6e7c60; id='FAMILY_CONTROLS_DISTRIBUTION', userDescription='Family Controls (Distribution)', platforms='.xros, .iphoneos'>\" = 1;\n    \"<DVTPortalProfileFeature: 0x60001771e840; id='PUSH_NOTIFICATIONS', userDescription='Push Notifications', platforms='.iphoneos, .xros, .watchos, .appletvos, .macosx'>\" = 1;\n}, Containers: {\n    \"Xcode.Portal.Container.Type.AppGroup\" = \"{(\\n    \\\"group.com.christianmanzke.Mimic\\\"\\n)}\";\n}>, provisioningPurpose: app-store, supportsIOSMac: 0, areFeaturesUpToDate: 0>";
+}, overrides: <IDEProvisionableOverrides 0x6000069f0630: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddacef0>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>>>, configuration: Default, codesignParameterSnapshot: <IDECodesignParameterSnapshot: 0x600018ca88a0>:
+Profile:  <DVTEmbeddedProvisioningProfile 0x60000a434240: name: iOS Team Store Provisioning Profile: com.jcmanzke.Mimic, UUID: 923d2196-0ddf-495d-ba2b-2e5f92806e4e, teamName: Christian Manzke, teamIdentifierPrefixes: (
+    V8U7G8VKD3
+), entitlements: {
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic";
+    "aps-environment" = production;
+    "beta-reports-active" = 1;
+    "com.apple.developer.family-controls" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "V8U7G8VKD3.*",
+        "com.apple.token"
+    );
+}, appIdentifierName: XC com jcmanzke Mimic, applicationIdentifierPrefixes: (
+    V8U7G8VKD3
+), dateCreated: 2026-04-11 20:33:30 +0000, dateExpired: 2027-01-28 22:53:31 +0000, certificateKinds: {(
+    "1.2.840.113635.100.6.1.7",
+    "1.2.840.113635.100.6.1.4"
+)}, certificateSHA1Hashes: {(
+    017B9B3B1D7F5829F1C90918FA316599C32CE5F4,
+    1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478
+)}, supportedUDIDs: {(
+)}, isUniversal: 0, isXcodeManaged: 1, platforms: {(
+    <DVTPlatform:0x60000307a900:'com.apple.platform.xros':<DVTFilePath:0x600003a49200:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/XROS.platform'>>,
+    <DVTPlatform:0x600003059200:'com.apple.platform.watchos':<DVTFilePath:0x600003560d90:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>,
+    <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>
+)}, filePath: <DVTFilePath:0x600016c4cab0:'/Users/christianmanzke/Library/Developer/Xcode/UserData/Provisioning Profiles/923d2196-0ddf-495d-ba2b-2e5f92806e4e.mobileprovision'>>
+Identity: 1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478
+Certificate <DVTSigningCertificate: 0x60000ab1c3c0; name='Apple Distribution: Christian Manzke (V8U7G8VKD3)', hash='1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478', serialNumber='66BF5B4664A870A35A12BC4A828344AE', certificateKinds='(
+    "1.2.840.113635.100.6.1.7",
+    "1.2.840.113635.100.6.1.4"
+), issueDate='2026-01-28 22:53:32 +0000''>>, errors: (null)>
+2026-04-11 20:33:33 +0000 [MT] Evaluation for PetWidgetExtensionExtension.appex is <IDEProvisionableStatusEvaluation 0x600017552290: inputs: <IDEProvisionableStatusEvalutorInputs 0x60002bd62d50: provisionableSnapshot: <IDEProvisionableSnapshot 0x600018d648a0: name: PetWidgetExtensionExtension.appex, configurations: {
+    Default = "<_IDEProvisionableConfigurationSnapshot 0x60001ef4c5a0: name: Default, provisioningStyle: 0, certificateSigningStyle: 2, team: <IDEProvisioningDisambiguatableBasicTeam: 0x600000145580; teamID='V8U7G8VKD3', teamName='Christian Manzke', teamType='Individual', username='jcmanzke@gmail.com', isFreeProvisioningTeam='0'>, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddb1e60>, platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), bundleIdentifier: com.jcmanzke.Mimic.PetWidgetExtension, profileSpecifier: (null), certificateIdentifier: iPhone Distribution, entitlementsFilePath: (null), baseEntitlements: <IDEProvisionableEntitlements: 0x600005b6c920; signedEntitlements='{\n    \"application-identifier\" = \"$(AppIdentifierPrefix)com.jcmanzke.Mimic.PetWidgetExtension\";\n    \"com.apple.developer.team-identifier\" = V8U7G8VKD3;\n    \"com.apple.security.application-groups\" =     (\n        \"group.com.christianmanzke.Mimic\"\n    );\n}', simulatedEntitlements='(null)'>, entitlementsExpansion: <IDEDistributionProvisioningEntitlementsExpansion: 0x60000ddb1eb0>, entitlementsDestination: 1, allowSigningWithoutTeamSelection: 0, signingRequiresTeam: 0, appIDFeatures: <DVTPortalAppIDFeatures 0x600005bd4000: Features: {\n    \"<DVTPortalProfileFeature: 0x6000177da5a0; id='APP_GROUPS', userDescription='App Groups', platforms='.watchos, .appletvos, .xros, .macosx, .iphoneos'>\" = 1;\n}, Containers: {\n    \"Xcode.Portal.Container.Type.AppGroup\" = \"{(\\n    \\\"group.com.christianmanzke.Mimic\\\"\\n)}\";\n}>, provisioningPurpose: app-store, supportsIOSMac: 0, areFeaturesUpToDate: 0>";
+}, overrides: <IDEProvisionableOverrides 0x600006934580: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000ddacfb0>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>>>, configuration: Default, codesignParameterSnapshot: <IDECodesignParameterSnapshot: 0x600018c12880>:
+Profile:  <DVTEmbeddedProvisioningProfile 0x60000a437480: name: iOS Team Store Provisioning Profile: com.jcmanzke.Mimic.PetWidgetExtension, UUID: b01ee824-3830-4b68-ac11-a805250e0720, teamName: Christian Manzke, teamIdentifierPrefixes: (
+    V8U7G8VKD3
+), entitlements: {
+    "application-identifier" = "V8U7G8VKD3.com.jcmanzke.Mimic.PetWidgetExtension";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = V8U7G8VKD3;
+    "com.apple.security.application-groups" =     (
+        "group.com.christianmanzke.Mimic"
+    );
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "V8U7G8VKD3.*",
+        "com.apple.token"
+    );
+}, appIdentifierName: XC com jcmanzke Mimic PetWidgetExtension, applicationIdentifierPrefixes: (
+    V8U7G8VKD3
+), dateCreated: 2026-04-11 20:33:32 +0000, dateExpired: 2027-01-28 22:53:31 +0000, certificateKinds: {(
+    "1.2.840.113635.100.6.1.7",
+    "1.2.840.113635.100.6.1.4"
+)}, certificateSHA1Hashes: {(
+    017B9B3B1D7F5829F1C90918FA316599C32CE5F4,
+    1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478
+)}, supportedUDIDs: {(
+)}, isUniversal: 0, isXcodeManaged: 1, platforms: {(
+    <DVTPlatform:0x60000307a900:'com.apple.platform.xros':<DVTFilePath:0x600003a49200:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/XROS.platform'>>,
+    <DVTPlatform:0x600003059200:'com.apple.platform.watchos':<DVTFilePath:0x600003560d90:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>,
+    <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>
+)}, filePath: <DVTFilePath:0x600016c4af40:'/Users/christianmanzke/Library/Developer/Xcode/UserData/Provisioning Profiles/b01ee824-3830-4b68-ac11-a805250e0720.mobileprovision'>>
+Identity: 1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478
+Certificate <DVTSigningCertificate: 0x60000ab464c0; name='Apple Distribution: Christian Manzke (V8U7G8VKD3)', hash='1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478', serialNumber='66BF5B4664A870A35A12BC4A828344AE', certificateKinds='(
+    "1.2.840.113635.100.6.1.7",
+    "1.2.840.113635.100.6.1.4"
+), issueDate='2026-01-28 22:53:32 +0000''>>, errors: (null)>
+2026-04-11 20:33:33 +0000  Step failed: <IDEDistributionSigningAssetsStep: 0x600005ac0d00>: Error Domain=IDEDistributionSigningAssetStepErrorDomain Code=0 "Locating signing assets failed." UserInfo={NSLocalizedDescription=Locating signing assets failed., IDEDistributionUnderlyingErrors=(
+    "Error Domain=IDEFoundation.(unknown context at $117c1b900).MissingFeatureError Code=0 \"Provisioning profile \"iOS Team Store Provisioning Profile: com.jcmanzke.Mimic.DeviceActivityReportExtension\" doesn't include the Family Controls (Development) capability.\" UserInfo={IDEProfileQualificationError_Profile=<DVTEmbeddedProvisioningProfile 0x60000a437180: name: iOS Team Store Provisioning Profile: com.jcmanzke.Mimic.DeviceActivityReportExtension, UUID: 950f29aa-9533-42ac-ae49-93c3b34d9979, teamName: Christian Manzke, teamIdentifierPrefixes: (\n    V8U7G8VKD3\n), entitlements: {\n    \"application-identifier\" = \"V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityReportExtension\";\n    \"beta-reports-active\" = 1;\n    \"com.apple.developer.team-identifier\" = V8U7G8VKD3;\n    \"get-task-allow\" = 0;\n    \"keychain-access-groups\" =     (\n        \"V8U7G8VKD3.*\",\n        \"com.apple.token\"\n    );\n}, appIdentifierName: XC com jcmanzke Mimic DeviceActivityReportExtension, applicationIdentifierPrefixes: (\n    V8U7G8VKD3\n), dateCreated: 2026-04-11 20:33:27 +0000, dateExpired: 2027-01-28 22:53:31 +0000, certificateKinds: {(\n    \"1.2.840.113635.100.6.1.7\",\n    \"1.2.840.113635.100.6.1.4\"\n)}, certificateSHA1Hashes: {(\n    017B9B3B1D7F5829F1C90918FA316599C32CE5F4,\n    1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478\n)}, supportedUDIDs: {(\n)}, isUniversal: 0, isXcodeManaged: 1, platforms: {(\n    <DVTPlatform:0x60000307a900:'com.apple.platform.xros':<DVTFilePath:0x600003a49200:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/XROS.platform'>>,\n    <DVTPlatform:0x600003059200:'com.apple.platform.watchos':<DVTFilePath:0x600003560d90:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>,\n    <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>\n)}, filePath: <DVTFilePath:0x600016c653b0:'/Users/christianmanzke/Library/Developer/Xcode/UserData/Provisioning Profiles/950f29aa-9533-42ac-ae49-93c3b34d9979.mobileprovision'>>, IDEProvisioningError_UserInfoKey_DVTPortalProfileFeature=<DVTPortalProfileFeature: 0x60000f5601c0; id='FAMILY_CONTROLS', userDescription='Family Controls (Development)', platforms='.iphoneos, .xros'>, IDEDistributionIssueSeverity=3, IDEProvisioningError_UserInfoKey_IDEProvisioningErrorAction=8, NSLocalizedDescription=Provisioning profile \"iOS Team Store Provisioning Profile: com.jcmanzke.Mimic.DeviceActivityReportExtension\" doesn't include the Family Controls (Development) capability.}",
+    "Error Domain=IDEFoundation.(unknown context at $117c1b8dc).MissingEntitlementError Code=2 \"Provisioning profile \"iOS Team Store Provisioning Profile: com.jcmanzke.Mimic.DeviceActivityReportExtension\" doesn't include the com.apple.developer.family-controls entitlement.\" UserInfo={NSLocalizedDescription=Provisioning profile \"iOS Team Store Provisioning Profile: com.jcmanzke.Mimic.DeviceActivityReportExtension\" doesn't include the com.apple.developer.family-controls entitlement., IDEDistributionIssueSeverity=3, IDEProvisioningError_UserInfoKey_RelatedPlistKeys=(\n    \"com.apple.developer.family-controls\"\n), IDEProfileQualificationError_Profile=<DVTEmbeddedProvisioningProfile 0x60000a437180: name: iOS Team Store Provisioning Profile: com.jcmanzke.Mimic.DeviceActivityReportExtension, UUID: 950f29aa-9533-42ac-ae49-93c3b34d9979, teamName: Christian Manzke, teamIdentifierPrefixes: (\n    V8U7G8VKD3\n), entitlements: {\n    \"application-identifier\" = \"V8U7G8VKD3.com.jcmanzke.Mimic.DeviceActivityReportExtension\";\n    \"beta-reports-active\" = 1;\n    \"com.apple.developer.team-identifier\" = V8U7G8VKD3;\n    \"get-task-allow\" = 0;\n    \"keychain-access-groups\" =     (\n        \"V8U7G8VKD3.*\",\n        \"com.apple.token\"\n    );\n}, appIdentifierName: XC com jcmanzke Mimic DeviceActivityReportExtension, applicationIdentifierPrefixes: (\n    V8U7G8VKD3\n), dateCreated: 2026-04-11 20:33:27 +0000, dateExpired: 2027-01-28 22:53:31 +0000, certificateKinds: {(\n    \"1.2.840.113635.100.6.1.7\",\n    \"1.2.840.113635.100.6.1.4\"\n)}, certificateSHA1Hashes: {(\n    017B9B3B1D7F5829F1C90918FA316599C32CE5F4,\n    1386AA59AA1CB941C3B9D8F7202F4D25D0EAC478\n)}, supportedUDIDs: {(\n)}, isUniversal: 0, isXcodeManaged: 1, platforms: {(\n    <DVTPlatform:0x60000307a900:'com.apple.platform.xros':<DVTFilePath:0x600003a49200:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/XROS.platform'>>,\n    <DVTPlatform:0x600003059200:'com.apple.platform.watchos':<DVTFilePath:0x600003560d90:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>,\n    <DVTPlatform:0x600003062400:'com.apple.platform.iphoneos':<DVTFilePath:0x600003565030:'/Users/christianmanzke/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>\n)}, filePath: <DVTFilePath:0x600016c653b0:'/Users/christianmanzke/Library/Developer/Xcode/UserData/Provisioning Profiles/950f29aa-9533-42ac-ae49-93c3b34d9979.mobileprovision'>>}"
+)}

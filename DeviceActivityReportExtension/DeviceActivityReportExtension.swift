@@ -3,7 +3,7 @@
 //  DeviceActivityReportExtension
 //
 
-import DeviceActivity
+@preconcurrency import DeviceActivity
 import ExtensionKit
 import SwiftUI
 
@@ -11,8 +11,8 @@ import SwiftUI
 struct MimicDeviceActivityReport: DeviceActivityReportExtension {
     var body: some DeviceActivityReportScene {
         // Create a report for each DeviceActivityReport.Context that your app supports.
-        TotalActivityReport { durationText, pickups in
-            TotalActivityView(totalDurationString: durationText, totalPickups: pickups)
+        TotalActivityReport { configuration in
+            TotalActivityView(totalDurationString: configuration.durationString, totalPickups: configuration.pickups)
         }
         // Add more reports here...
     }

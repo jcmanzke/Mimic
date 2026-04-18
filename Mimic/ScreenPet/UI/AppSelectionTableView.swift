@@ -1,4 +1,5 @@
 import SwiftUI
+import FamilyControls
 
 struct AppSelectionTableView: View {
     @Bindable var manager: AppUsageManager
@@ -14,139 +15,81 @@ struct AppSelectionTableView: View {
                 .padding(.horizontal, 8)
             
             VStack(spacing: 0) {
-                // MARK: - Selected Apps Section
-                if !manager.selectedApps.isEmpty {
-                    VStack(alignment: .leading, spacing: 0) {
-                        sectionLabel("SELECTED APPS", color: Color.theme.primary)
-                        
-                        ForEach(manager.selectedApps) { app in
-                            AppRow(app: app, isSelected: true) {
-                                withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
-                                    manager.toggleSelection(for: app.id)
-                                }
-                            }
+                // Selection summary
+                if manager.hasSelection {
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack(spacing: 10) {
+                            Image(systemName: "checkmark.shield.fill")
+                                .font(.system(size: 18))
+                                .foregroundColor(Color.theme.primary)
                             
-                            if app.id != manager.selectedApps.last?.id {
-                                Divider()
-                                    .padding(.leading, 56)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Tracking \(manager.selectionCount) item\(manager.selectionCount == 1 ? "" : "s")")
+                                    .font(.appFont.headline)
+                                    .foregroundColor(Color.theme.textPrimary)
+                                
+                                Text("Tap below to change your selection")
+                                    .font(.appFont.caption)
+                                    .foregroundColor(Color.theme.textSecondary)
                             }
                         }
+                        .padding(.horizontal, 20)
+                        .padding(.top, 16)
+                        .padding(.bottom, 12)
+                        
+                        Divider()
+                            .padding(.horizontal, 20)
                     }
-                    
-                    // Separator between sections
-                    Rectangle()
-                        .fill(Color.theme.textSecondary.opacity(0.08))
-                        .frame(height: 8)
+                } else {
+                    VStack(spacing: 8) {
+                        Image(systemName: "apps.iphone")
+                            .font(.system(size: 32))
+                            .foregroundColor(Color.theme.textSecondary.opacity(0.4))
+                        
+                        Text("No apps selected yet")
+                            .font(.appFont.body)
+                            .foregroundColor(Color.theme.textSecondary)
+                        
+                        Text("Choose which apps to monitor")
+                            .font(.appFont.caption)
+                            .foregroundColor(Color.theme.textSecondary.opacity(0.7))
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 24)
                 }
                 
-                // MARK: - All Apps Section
-                if !manager.unselectedApps.isEmpty {
-                    VStack(alignment: .leading, spacing: 0) {
-                        sectionLabel("ALL APPS", color: Color.theme.textSecondary)
+                // Select Apps Button
+                Button {
+                    manager.isPickerPresented = true
+                } label: {
+                    HStack(spacing: 8) {
+                        Image(systemName: manager.hasSelection ? "pencil.circle.fill" : "plus.circle.fill")
+                            .font(.system(size: 16))
                         
-                        ForEach(manager.unselectedApps) { app in
-                            AppRow(app: app, isSelected: false) {
-                                withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
-                                    manager.toggleSelection(for: app.id)
-                                }
-                            }
-                            
-                            if app.id != manager.unselectedApps.last?.id {
-                                Divider()
-                                    .padding(.leading, 56)
-                            }
-                        }
+                        Text(manager.hasSelection ? "Change Apps" : "Select Apps")
+                            .font(.appFont.headline)
                     }
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 14)
+                    .background(
+                        RoundedRectangle(cornerRadius: 14)
+                            .fill(Color.theme.primary)
+                    )
                 }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 16)
             }
             .background(Color.white)
             .cornerRadius(24)
         }
-    }
-    
-    // MARK: - Section Label
-    
-    private func sectionLabel(_ text: String, color: Color) -> some View {
-        Text(text)
-            .font(.appFont.overline)
-            .foregroundColor(color)
-            .tracking(0.8)
-            .padding(.horizontal, 20)
-            .padding(.top, 16)
-            .padding(.bottom, 8)
-    }
-}
-
-// MARK: - App Row
-
-struct AppRow: View {
-    let app: AppUsageItem
-    let isSelected: Bool
-    let onToggle: () -> Void
-    
-    var body: some View {
-        HStack(spacing: 14) {
-            // App icon
-            ZStack {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(app.iconColor.opacity(0.12))
-                    .frame(width: 40, height: 40)
-                
-                Image(systemName: app.iconSymbol)
-                    .font(.system(size: 17, weight: .medium))
-                    .foregroundColor(app.iconColor)
-            }
-            
-            // App name
-            VStack(alignment: .leading, spacing: 2) {
-                Text(app.name)
-                    .font(.appFont.body)
-                    .foregroundColor(Color.theme.textPrimary)
-                
-                Text(app.screenTime)
-                    .font(.appFont.caption)
-                    .foregroundColor(Color.theme.textSecondary)
-            }
-            
-            Spacer()
-            
-            // Select / Selected toggle
-            Button(action: onToggle) {
-                if isSelected {
-                    HStack(spacing: 4) {
-                        Image(systemName: "checkmark.circle.fill")
-                            .font(.system(size: 14))
-                        Text("Selected")
-                            .font(.appFont.subheadline)
-                    }
-                    .foregroundColor(Color.theme.primary)
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 6)
-                    .background(
-                        Capsule()
-                            .fill(Color.theme.primary.opacity(0.1))
-                    )
-                } else {
-                    Text("Select")
-                        .font(.appFont.subheadline)
-                        .foregroundColor(Color.theme.textSecondary)
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 6)
-                        .background(
-                            Capsule()
-                                .stroke(Color.theme.textSecondary.opacity(0.3), lineWidth: 1)
-                        )
-                }
-            }
-            .buttonStyle(.plain)
+        .familyActivityPicker(
+            isPresented: $manager.isPickerPresented,
+            selection: $manager.activitySelection
+        )
+        .onChange(of: manager.activitySelection) { _, _ in
+            manager.saveSelection()
         }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 12)
-        .contentShape(Rectangle())
-        .transition(.asymmetric(
-            insertion: .move(edge: .top).combined(with: .opacity),
-            removal: .move(edge: .bottom).combined(with: .opacity)
-        ))
     }
 }
 
